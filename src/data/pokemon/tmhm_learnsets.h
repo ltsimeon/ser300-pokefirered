@@ -9385,4 +9385,27 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM49_SNATCH)
                                         | TMHM(HM05_FLASH)),
 
+    [SPECIES_CRYOGONAL]   = TMHM_LEARNSET(TMHM(TM03_WATER_PULSE)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM07_HAIL)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM12_TAUNT)
+                                        | TMHM(TM13_ICE_BEAM)
+                                        | TMHM(TM14_BLIZZARD)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM16_LIGHT_SCREEN)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM18_RAIN_DANCE)
+                                        | TMHM(TM20_SAFEGUARD)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+                                        | TMHM(TM33_REFLECT)
+                                        | TMHM(TM41_TORMENT)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)),
+
 };

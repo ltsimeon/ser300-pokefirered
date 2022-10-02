@@ -2718,3 +2718,10 @@ const u8 gDeoxysPokedexText[] = _(
     "altering its appearance.");
 
 const u8 gDeoxysPokedexTextUnused[] = _("");
+
+const u8 gCryogonalPokedexText[] = _(
+    "When the weather gets hot, these\n"
+    "POKéMON turn into water vapor.\n"
+    "CRYOGONAL are never seen in summer.");
+
+const u8 gCryogonalPokedexTextUnused[] = _("");

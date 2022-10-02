@@ -1382,6 +1382,7 @@ gCryTable::
 	cry Cry_Jirachi
 	cry Cry_Deoxys
 	cry Cry_Chimecho
+	cry Cry_Cryogonal
 
 gCryTable_Reverse::
 	cry_reverse Cry_Bulbasaur
@@ -1772,6 +1773,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Jirachi
 	cry_reverse Cry_Deoxys
 	cry_reverse Cry_Chimecho
+	cry_reverse Cry_Cryogonal
 
 	.align 2
 voicegroup129::

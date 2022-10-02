@@ -1,3 +1,5 @@
+#include "../../../include/constants/species.h"
+
 static const u16 sDexCategory_GrasslandPkmn_Page1[] = {
     SPECIES_RATTATA,
     SPECIES_RATICATE,
@@ -630,6 +632,7 @@ static const u16 sDexCategory_MountainPkmn_Page13[] = {
 
 static const u16 sDexCategory_MountainPkmn_Page14[] = {
     SPECIES_ABSOL,
+    SPECIES_CRYOGONAL,
 };
 
 static const u16 sDexCategory_MountainPkmn_Page15[] = {

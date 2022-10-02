@@ -1,3 +1,5 @@
+#include "../../../include/constants/species.h"
+
 const struct PokedexEntry gPokedexEntries[] =
 {
     [NATIONAL_DEX_NONE] =
@@ -5029,5 +5031,18 @@ const struct PokedexEntry gPokedexEntries[] =
         .pokemonOffset = 0,
         .trainerScale = 337,
         .trainerOffset = 2,
+    },
+
+    [NATIONAL_DEX_CRYOGONAL] =
+    {
+        .categoryName = _("CRYSTALIZE"),
+        .height = 11,
+        .weight = 1480,
+        .description = gCryogonalPokedexText,
+        .unusedDescription = gCryogonalPokedexTextUnused,
+        .pokemonScale = 293,
+        .pokemonOffset = -2,
+        .trainerScale = 337,
+        .trainerOffset = -2,
     },
 };

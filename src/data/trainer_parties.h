@@ -3720,7 +3720,7 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltDaisuke[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabSquirtle[] = {
     {
         .iv = 0,
-        .lvl = 9,
+        .lvl = 5,
         .species = SPECIES_SQUIRTLE,
     },
 };
@@ -3728,15 +3728,15 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabSquirtle[] =
 static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabBulbasaur[] = {
     {
         .iv = 0,
-        .lvl = 9,
-        .species = SPECIES_BULBASAUR,
+        .lvl = 5,
+        .species = SPECIES_CRYOGONAL,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabCharmander[] = {
     {
         .iv = 0,
-        .lvl = 9,
+        .lvl = 5,
         .species = SPECIES_CHARMANDER,
     },
 };
@@ -3766,8 +3766,8 @@ static const struct TrainerMonNoItemCustomMoves sParty_RivalRoute22EarlyBulbasau
     {
         .iv = 50,
         .lvl = 9,
-        .species = SPECIES_BULBASAUR,
-        .moves = {MOVE_TACKLE, MOVE_GROWL, MOVE_NONE, MOVE_NONE},
+        .species = SPECIES_CRYOGONAL,
+        .moves = {MOVE_BIND, MOVE_POWDER_SNOW, MOVE_SHARPEN, MOVE_ATTRACT},
     },
 };
 
@@ -3835,8 +3835,8 @@ static const struct TrainerMonNoItemCustomMoves sParty_RivalCeruleanBulbasaur[] 
     {
         .iv = 100,
         .lvl = 18,
-        .species = SPECIES_BULBASAUR,
-        .moves = {MOVE_SLEEP_POWDER, MOVE_POISON_POWDER, MOVE_VINE_WHIP, MOVE_LEECH_SEED},
+        .species = SPECIES_CRYOGONAL,
+        .moves = {MOVE_ICY_WIND, MOVE_RAPID_SPIN, MOVE_BIND, MOVE_SHARPEN},
     },
 };
 
@@ -5851,7 +5851,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RivalSsAnneBulbasaur[] =
     {
         .iv = 100,
         .lvl = 20,
-        .species = SPECIES_IVYSAUR,
+        .species = SPECIES_CRYOGONAL,
     },
 };
 
@@ -5930,7 +5930,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RivalPokenonTowerBulbasa
     {
         .iv = 100,
         .lvl = 25,
-        .species = SPECIES_IVYSAUR,
+        .species = SPECIES_CRYOGONAL,
     },
 };
 
@@ -6014,7 +6014,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RivalSilphBulbasaur[] = 
     {
         .iv = 150,
         .lvl = 40,
-        .species = SPECIES_VENUSAUR,
+        .species = SPECIES_CRYOGONAL,
     },
 };
 
@@ -6119,8 +6119,8 @@ static const struct TrainerMonNoItemCustomMoves sParty_RivalRoute22LateBulbasaur
     {
         .iv = 250,
         .lvl = 53,
-        .species = SPECIES_VENUSAUR,
-        .moves = {MOVE_RAZOR_LEAF, MOVE_SWEET_SCENT, MOVE_GROWTH, MOVE_SYNTHESIS},
+        .species = SPECIES_CRYOGONAL,
+        .moves = {MOVE_SOLAR_BEAM, MOVE_ICE_BEAM, MOVE_CONFUSE_RAY, MOVE_EXPLOSION},
     },
 };
 
@@ -6247,9 +6247,9 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionFirstBulbasaur[] = 
     {
         .iv = 255,
         .lvl = 63,
-        .species = SPECIES_VENUSAUR,
+        .species = SPECIES_CRYOGONAL,
         .heldItem = ITEM_SITRUS_BERRY,
-        .moves = {MOVE_SOLAR_BEAM, MOVE_SYNTHESIS, MOVE_SUNNY_DAY, MOVE_GROWTH},
+        .moves = {MOVE_SHEER_COLD, MOVE_ICE_BEAM, MOVE_CONFUSE_RAY, MOVE_EXPLOSION},
     },
 };
 
@@ -10797,9 +10797,9 @@ static const struct TrainerMonItemCustomMoves sParty_ChampionRematchBulbasaur[] 
     {
         .iv = 255,
         .lvl = 75,
-        .species = SPECIES_VENUSAUR,
+        .species = SPECIES_CRYOGONAL,
         .heldItem = ITEM_SITRUS_BERRY,
-        .moves = {MOVE_SOLAR_BEAM, MOVE_SLUDGE_BOMB, MOVE_EARTHQUAKE, MOVE_SUNNY_DAY},
+        .moves = {MOVE_EXPLOSION, MOVE_BLIZZARD, MOVE_FAINT_ATTACK, MOVE_HAZE},
     },
 };
 
