@@ -4800,6 +4800,7 @@ extern const u8 gMonIcon_Latios[];
 extern const u8 gMonIcon_Jirachi[];
 extern const u8 gMonIcon_Deoxys[];
 extern const u8 gMonIcon_Chimecho[];
+extern const u8 gMonIcon_Cryogonal[];
 extern const u8 gMonIcon_Egg[];
 extern const u8 gMonIcon_Unown_B[];
 extern const u8 gMonIcon_Unown_C[];
