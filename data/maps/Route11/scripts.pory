@@ -1,0 +1,20 @@
+raw `
+Route11_MapScripts::
+	.byte 0
+
+Route11_EventScript_DiglettsCaveSign::
+	msgbox Route11_Text_DiglettsCave, MSGBOX_SIGN
+	end
+`
+
+script Route11_EventScript_SignOfLegend {
+	lock
+	msgbox(format("You've found the Sign of Legends! Congratulations!"))
+	msgbox(format("Enjoy these five Rare Candies as a reward!"))
+	giveitem(ITEM_RARE_CANDY, 5)
+	if(var(VAR_RESULT) == 0) {
+		msgbox(format("Ah, you've got too many of those. Use some first, then come back for more."))
+	}
+	release
+	end
+}

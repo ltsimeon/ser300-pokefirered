@@ -16,6 +16,15 @@ It builds the following ROMs:
 
 To set up the repository, see [INSTALL.md](INSTALL.md).
 
+## Tips
+
+If you want to add a new Pokémon to the game, make sure to: 
+1. Increase the NUM_POKEMON by one.
+2. Increase the index numbers of all the Unown sprites and of Egg to fit yours in.
+3. Use a program capable of editing 16-color indexed PNG files for your spritework (I was recommended GraphicsGale.)
+4. Export cries as 10512 Hz mono AIFF sound files. Audacity can do this just fine.
+5. Make sure that every array that has one entry for each Pokémon includes yours, or something might end up missing.
+6. Make sure there are no holes in your National Pokedex numbers.
 
 ## See also
 
@@ -34,6 +43,8 @@ Other disassembly and/or decompilation projects:
 * [**Pokémon Mystery Dungeon: Red Rescue Team**](https://github.com/pret/pmd-red)
 
 
+
 ## Contacts
 
-You can find us on [Discord](https://discord.gg/d5dubZ3) and [IRC](https://web.libera.chat/?#pret).
+You can find the original creators of this project on [Discord](https://discord.gg/d5dubZ3) and [IRC](https://web.libera.chat/?#pret).
+You can contact me at ltsimeon@quinnipiac.edu - and if I lose access to that, at ltsimeon4701@gmail.com.
