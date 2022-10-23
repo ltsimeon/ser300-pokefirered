@@ -6,3 +6,60 @@ Route7_EventScript_UndergroundPathSign::
 	msgbox Route7_Text_UndergroundPathSign, MSGBOX_SIGN
 	end
 `
+
+script Route7_EventScript_BerryGamer {
+	lock
+	faceplayer
+	setvar(VAR_R7_BERRIES_FOUND, 0)
+	if (flag(FLAG_BERRY_GAME_WON)) {
+		msgbox(format("Thanks for playing my little game!"))
+		release
+		end
+	}
+	
+	if (flag(FLAG_HIDDEN_ITEMS_START + HIDDEN_ITEM_ROUTE7_PECHA_BERRY)) {
+		addvar(VAR_R7_BERRIES_FOUND, 1)
+	}
+	if (flag(FLAG_HIDDEN_ITEMS_START + HIDDEN_ITEM_ROUTE7_POMEG_BERRY)) {
+		addvar(VAR_R7_BERRIES_FOUND, 1)
+	}
+	if (flag(FLAG_HIDDEN_ITEMS_START + HIDDEN_ITEM_ROUTE7_CHESTO_BERRY)) {
+		addvar(VAR_R7_BERRIES_FOUND, 1)
+	}
+	if (flag(FLAG_HIDDEN_ITEMS_START + HIDDEN_ITEM_ROUTE7_PERSIM_BERRY)) {
+		addvar(VAR_R7_BERRIES_FOUND, 1)
+	}
+	if (flag(FLAG_HIDDEN_ITEMS_START + HIDDEN_ITEM_ROUTE7_WEPEAR_BERRY)) {
+		addvar(VAR_R7_BERRIES_FOUND, 1)
+	}
+	
+	switch (var(VAR_R7_BERRIES_FOUND)) {
+		case 0: 
+			msgbox(format("Ho there, Trainer! Would you like to entertain a bored old man?"))
+			msgbox(format("If you find all five berries I've \nburied here, I'll give you a TM!"))
+			msgbox("It should come in handy for \n"
+			"your next Gym battle!\l"
+			"Where'd I get it, you ask?\l"
+			"The Celadon Game Corner, of course!")
+		case 1: 
+			msgbox(format("That's one berry. Four more to go!"))
+		case 2: 
+			msgbox(format("Two berries down. Three more to go!"))
+		case 3: 
+			msgbox(format("Three already? Just two more to go!"))
+		case 4: 
+			msgbox(format("Looks like there's just one left!"))
+		case 5: 
+			msgbox(format("Ooh! That's all the berries! Alright, time for my end of the deal..."))
+		giveitem(ITEM_TM35_FLAMETHROWER,1)
+		setflag(FLAG_BERRY_GAME_WON)
+		msgbox(format("Wasn't that fun? Good luck out there!"))
+		default: 
+			msgbox(format("The flags are all messed up. \nThis doesn't quite seem right."))
+	}
+	
+	// Reset the berry tracker again so it can't increment between multiple talks to him.
+	setvar(VAR_R7_BERRIES_FOUND, 0)
+	release
+	end
+}

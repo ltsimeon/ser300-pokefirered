@@ -928,7 +928,7 @@
     {
       "id": "LAYOUT_ROUTE7",
       "name": "Route7_Layout",
-      "width": 24,
+      "width": 52,
       "height": 20,
       "border_width": 2,
       "border_height": 2,
@@ -1036,7 +1036,7 @@
     {
       "id": "LAYOUT_ROUTE16",
       "name": "Route16_Layout",
-      "width": 48,
+      "width": 58,
       "height": 20,
       "border_width": 2,
       "border_height": 2,
@@ -4380,6 +4380,30 @@
       "secondary_tileset": "gTileset_MtEmber",
       "border_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa/border.bin",
       "blockdata_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa/map.bin"
+    },
+    {
+      "id": "LAYOUT_DIGLETTS_CAVE_WEST_ENTRANCE",
+      "name": "DiglettsCave_WestEntrance_Layout",
+      "width": 10,
+      "height": 8,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_DiglettsCave",
+      "border_filepath": "data/layouts/DiglettsCave_WestEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/DiglettsCave_WestEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_DIGLETTS_CAVE_EAST_ENTRANCE",
+      "name": "DiglettsCave_EastEntrance_Layout",
+      "width": 10,
+      "height": 8,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_DiglettsCave",
+      "border_filepath": "data/layouts/DiglettsCave_EastEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/DiglettsCave_EastEntrance/map.bin"
     }
   ]
 }

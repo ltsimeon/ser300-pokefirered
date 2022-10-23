@@ -645,7 +645,7 @@
 #define FLAG_DID_ESPHERE_TRADE                           0x274
 #define FLAG_DID_TANGENY_TRADE                           0x275
 #define FLAG_DID_SEELOR_TRADE                            0x276
-#define FLAG_0x277                                       0x277
+#define FLAG_BERRY_GAME_WON                              0x277
 #define FLAG_GOT_HITMON_FROM_DOJO                        0x278
 #define FLAG_0x279                                       0x279
 #define FLAG_SILPH_2F_DOOR_1                             0x27A
@@ -1211,12 +1211,12 @@
 #define HIDDEN_ITEM_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE_RAWST_BERRY  188
 #define HIDDEN_ITEM_VIRIDIAN_CITY_GYM_MACHO_BRACE                     189
 #define HIDDEN_ITEM_SSANNE_EXTERIOR_LAVA_COOKIE                       190
+#define HIDDEN_ITEM_ROUTE7_PECHA_BERRY                                191
+#define HIDDEN_ITEM_ROUTE7_POMEG_BERRY                                192
+#define HIDDEN_ITEM_ROUTE7_PERSIM_BERRY                               193
+#define HIDDEN_ITEM_ROUTE7_CHESTO_BERRY                               194
 
 // Unused?
-#define FLAG_0x4A7               0x4A7
-#define FLAG_0x4A8               0x4A8
-#define FLAG_0x4A9               0x4A9
-#define FLAG_0x4AA               0x4AA
 #define FLAG_0x4AB               0x4AB
 #define FLAG_0x4AC               0x4AC
 #define FLAG_0x4AD               0x4AD
