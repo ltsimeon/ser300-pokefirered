@@ -17,19 +17,19 @@ static const struct InGameTrade sInGameTrades[] = {
     }, 
     [INGAME_TRADE_JYNX] = 
     {
-        .nickname = _("ZYNX"),
-        .species = SPECIES_JYNX,
-        .ivs = {18, 17, 18, 22, 25, 21},
+        .nickname = _("ARU"),
+        .species = SPECIES_DELIBIRD,
+        .ivs = {25, 12, 25, 25, 25, 25},
         .abilityNum = 0,
         .otId = 36728,
         .conditions = {5, 30, 5, 5, 5},
-        .personality = 0x498a2e1d,
-        .heldItem = ITEM_FAB_MAIL,
-        .mailNum = 0,
+        .personality = 0x0bceee46,
+        .heldItem = ITEM_LUCKY_EGG,
+        .mailNum = 255,
         .otName = _("DONTAE"),
         .otGender = MALE,
         .sheen = 10,
-        .requestedSpecies = SPECIES_POLIWHIRL
+        .requestedSpecies = SPECIES_SMOOCHUM
     }, 
     [INGAME_TRADE_NIDORAN] = 
     {
