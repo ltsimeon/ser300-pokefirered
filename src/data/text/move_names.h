@@ -352,6 +352,8 @@ const u8 gMoveNames[][13] = {
     _("ROCK BLAST"),
     _("SHOCK WAVE"),
     _("WATER PULSE"),
+    _("SHADOW SNEAK"),
+    _("DARK PULSE"),
     _("DOOM DESIRE"),
     _("PSYCHO BOOST")
 };

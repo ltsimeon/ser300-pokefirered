@@ -2856,16 +2856,18 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BeautyGrace[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_BeautyOlivia[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_BeautyOlivia[] = {
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_SNUBBULL,
+        .moves = {MOVE_SPIKES, MOVE_ROAR, MOVE_BRICK_BREAK, MOVE_BODY_SLAM},
     },
     {
         .iv = 0,
         .lvl = 29,
         .species = SPECIES_IVYSAUR,
+        .moves = {MOVE_LEECH_SEED, MOVE_SLUDGE_BOMB, MOVE_FRENZY_PLANT, MOVE_KNOCK_OFF},
     },
 };
 

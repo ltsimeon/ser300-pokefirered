@@ -353,6 +353,8 @@ const u8 gMoveDescription_DragonDance[] = _("A mystic, powerful\ndance that boos
 const u8 gMoveDescription_RockBlast[] = _("The user hurls two\nto five hard rocks\nat the foe to\nattack.");
 const u8 gMoveDescription_ShockWave[] = _("A rapid jolt of\nelectricity strikes\nthe foe. It can't\nbe evaded.");
 const u8 gMoveDescription_WaterPulse[] = _("An attack with a\npulsing blast of\nwater. It may also\nconfuse the foe.");
+const u8 gMoveDescription_ShadowSneak[] = _("The user stretches\ntheir shadow to\nhit from behind.\nAlways goes first.");
+const u8 gMoveDescription_DarkPulse[] = _("An attack with a\nhorrifyingly evil\naura. It may make\nthe foe flinch.");
 const u8 gMoveDescription_DoomDesire[] = _("A move that attacks\nthe foe with a\nblast of light two\nturns after use.");
 const u8 gMoveDescription_PsychoBoost[] = _("An intense attack\nthat also sharply\nreduces the user's\nSP. ATK stat.");
 
@@ -709,6 +711,8 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_ROCK_BLAST    - 1] = gMoveDescription_RockBlast,
     [MOVE_SHOCK_WAVE    - 1] = gMoveDescription_ShockWave,
     [MOVE_WATER_PULSE   - 1] = gMoveDescription_WaterPulse,
+    [MOVE_SHADOW_SNEAK  - 1] = gMoveDescription_ShadowSneak,
+    [MOVE_DARK_PULSE    - 1] = gMoveDescription_DarkPulse,
     [MOVE_DOOM_DESIRE   - 1] = gMoveDescription_DoomDesire,
     [MOVE_PSYCHO_BOOST  - 1] = gMoveDescription_PsychoBoost,
 };

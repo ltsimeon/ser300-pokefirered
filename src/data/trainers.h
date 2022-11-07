@@ -3288,7 +3288,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = NELEMS(sParty_BeautyOlivia),
-        .party = {.NoItemDefaultMoves = sParty_BeautyOlivia}
+        .party = {.NoItemCustomMoves = sParty_BeautyOlivia}
     },
     [TRAINER_BEAUTY_LAUREN] = {
         .partyFlags = 0,

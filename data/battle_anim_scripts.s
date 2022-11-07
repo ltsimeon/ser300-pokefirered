@@ -373,6 +373,8 @@ gBattleAnims_Moves::
 	.4byte Move_ROCK_BLAST
 	.4byte Move_SHOCK_WAVE
 	.4byte Move_WATER_PULSE
+    .4byte Move_SHADOW_SNEAK
+    .4byte Move_DARK_PULSE
 	.4byte Move_DOOM_DESIRE
 	.4byte Move_PSYCHO_BOOST
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
@@ -3185,6 +3187,30 @@ Move_SPITE:
 	clearmonbg ANIM_TARGET
 	end
 
+Move_DARK_PULSE:
+    loadspritegfx ANIM_TAG_PURPLE_RING
+    fadetobg BG_DARK
+    playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
+    waitbgfadein
+    monbg ANIM_DEF_PARTNER
+    createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_ATTACKER, 2, 6, 0, 8, RGB_BLACK
+    createvisualtask AnimTask_SpiteTargetShadow, 2
+    createsprite gScreechRingSpriteTemplate, ANIM_TARGET, 2, 16, 0, 0, 0, 30, 0
+    delay 5
+    playsewithpan SE_M_GIGA_DRAIN, SOUND_PAN_ATTACKER
+    createsprite gScreechRingSpriteTemplate, ANIM_TARGET, 2, 16, 0, 0, 0, 30, 0
+    delay 5
+    playsewithpan SE_M_GIGA_DRAIN, SOUND_PAN_ATTACKER
+    createsprite gScreechRingSpriteTemplate, ANIM_TARGET, 2, 16, 0, 0, 0, 30, 0
+    delay 13
+    createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 8, 18, 1
+    loopsewithpan SE_M_PSYBEAM, SOUND_PAN_TARGET, 20, 3
+    waitforvisualfinish
+    restorebg
+    waitbgfadein
+    clearmonbg ANIM_TARGET
+    end
+
 Move_MACH_PUNCH:
 	loadspritegfx ANIM_TAG_IMPACT
 	loadspritegfx ANIM_TAG_HANDS_AND_FEET
@@ -3571,6 +3597,33 @@ Move_TORMENT:
 	createsprite gAngerMarkSpriteTemplate, ANIM_TARGET, 2, 1, 20, -28
 	playsewithpan SE_M_SWAGGER2, SOUND_PAN_TARGET
 	end
+
+Move_SHADOW_SNEAK:
+    fadetobg BG_GHOST
+    setalpha 0, 16
+    delay 1
+    createvisualtask AnimTask_InitMementoShadow, 2
+    delay 1
+    createvisualtask AnimTask_MoveAttackerMementoShadow, 5
+    playsewithpan SE_M_PSYBEAM, SOUND_PAN_ATTACKER
+    delay 48
+    playsewithpan SE_M_PSYBEAM2, SOUND_PAN_ATTACKER
+    waitforvisualfinish
+    createvisualtask AnimTask_MementoHandleBg, 2
+    delay 12
+    setalpha 0, 16
+    delay 1
+    monbg_static ANIM_TARGET
+    createvisualtask AnimTask_MoveTargetMementoShadow, 5
+    playsewithpan SE_M_PSYBEAM, SOUND_PAN_TARGET
+    waitforvisualfinish
+    clearmonbg_static ANIM_TARGET
+    restorebg
+    waitbgfadein
+    delay 1
+    blendoff
+    delay 1
+    end
 
 Move_MEMENTO:
 	setalpha 0, 16
