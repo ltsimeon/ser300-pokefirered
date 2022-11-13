@@ -540,16 +540,10 @@ bool32 PlayerIsMovingOnRockStairs(u8 direction)
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     x = objectEvent->currentCoords.x;
     y = objectEvent->currentCoords.y;
-    switch (direction)
-    {
-    case DIR_NORTH:
-        return MetatileBehavior_IsRockStairs(MapGridGetMetatileBehaviorAt(x, y));
-    case DIR_SOUTH:
-        MoveCoords(DIR_SOUTH, &x, &y);
-        return MetatileBehavior_IsRockStairs(MapGridGetMetatileBehaviorAt(x, y));
-    default:
-        return FALSE;
-    }
+	
+	// Restructuring Rock Stairs behavior slightly to make Koga's Gym work better.
+    MoveCoords(direction, &x, &y);
+    return MetatileBehavior_IsRockStairs(MapGridGetMetatileBehaviorAt(x, y));
 }
 
 static u8 CheckForPlayerAvatarCollision(u8 direction)

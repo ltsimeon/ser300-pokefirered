@@ -1,28 +1,29 @@
-#include "global.h"
-#include "gflib.h"
-#include "data.h"
-#include "item.h"
-#include "item_menu.h"
-#include "link.h"
-#include "m4a.h"
-#include "party_menu.h"
-#include "pokeball.h"
-#include "strings.h"
-#include "pokemon_special_anim.h"
-#include "task.h"
-#include "util.h"
-#include "battle.h"
-#include "battle_anim.h"
-#include "battle_controllers.h"
-#include "battle_interface.h"
-#include "battle_message.h"
-#include "battle_script_commands.h"
-#include "reshow_battle_screen.h"
-#include "constants/battle_anim.h"
-#include "constants/items.h"
-#include "constants/moves.h"
-#include "constants/songs.h"
-#include "constants/sound.h"
+#include "../include/global.h"
+#include "../include/gflib.h"
+#include "../include/data.h"
+#include "../include/item.h"
+#include "../include/item_menu.h"
+#include "../include/link.h"
+#include "../include/m4a.h"
+#include "../include/party_menu.h"
+#include "../include/pokeball.h"
+#include "../include/strings.h"
+#include "../include/pokemon_special_anim.h"
+#include "../include/task.h"
+#include "../include/util.h"
+#include "../include/battle.h"
+#include "../include/battle_anim.h"
+#include "../include/battle_controllers.h"
+#include "../include/battle_interface.h"
+#include "../include/battle_message.h"
+#include "../include/battle_script_commands.h"
+#include "../include/reshow_battle_screen.h"
+#include "../include/constants/battle_anim.h"
+#include "../include/constants/items.h"
+#include "../include/constants/moves.h"
+#include "../include/constants/songs.h"
+#include "../include/constants/sound.h"
+#include "../include/constants/trainers.h"
 
 static void PlayerHandleGetMonData(void);
 static void PlayerHandleSetMonData(void);
@@ -1406,10 +1407,17 @@ static void MoveSelectionDisplayMoveType(void)
 
     txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
     *txtPtr++ = EXT_CTRL_CODE_BEGIN;
-    *txtPtr++ = 6;
+    *txtPtr++ = EXT_CTRL_CODE_FONT;
     *txtPtr++ = 1;
     txtPtr = StringCopy(txtPtr, gText_MoveInterfaceDynamicColors);
+	
+	// Physical moves have their type written in orange, and special ones in blue.
+    *txtPtr++ = EXT_CTRL_CODE_BEGIN;
+    *txtPtr++ = EXT_CTRL_CODE_COLOR;
+	*txtPtr++ = (1 + gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].damageCategory);
+		
     StringCopy(txtPtr, gTypeNames[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type]);
+
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
 }
 

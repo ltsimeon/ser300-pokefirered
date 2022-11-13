@@ -1,5 +1,6 @@
 #include "global.h"
 #include "constants/moves.h"
+#include "../include/gba/types.h"
 
 const u8 gMoveDescription_Pound[] = _("A physical attack\ndelivered with a\nlong tail or a\nforeleg, etc.");
 const u8 gMoveDescription_KarateChop[] = _("The foe is attacked\nwith a sharp chop.\nIt has a high\ncritical-hit ratio.");
@@ -193,7 +194,7 @@ const u8 gMoveDescription_MudSlap[] = _("Mud is hurled in\nthe foe's face to\nin
 const u8 gMoveDescription_Octazooka[] = _("Ink is blasted in\nthe foe's face or\neyes to damage and\nlower accuracy.");
 const u8 gMoveDescription_Spikes[] = _("A trap of spikes is\nlaid around the\nfoe's party to hurt\nfoes switching in.");
 const u8 gMoveDescription_ZapCannon[] = _("An electric blast is\nfired like a cannon\nto inflict damage\nand paralyze.");
-const u8 gMoveDescription_Foresight[] = _("Completely negates\nthe foe's efforts to\nheighten its ability\nto evade.");
+const u8 gMoveDescription_Foresight[] = _("Negates the foes's\nevasiveness, and\nremoves GHOST's\nphysical immunities.");
 const u8 gMoveDescription_DestinyBond[] = _("If the user faints,\nthe foe delivering\nthe final hit also\nfaints.");
 const u8 gMoveDescription_PerishSong[] = _("Any battler that\nhears this faints\nin three turns\nunless it switches.");
 const u8 gMoveDescription_IcyWind[] = _("A chilling wind is\nused to attack.\nIt also lowers the\nSPEED stat.");
@@ -355,6 +356,15 @@ const u8 gMoveDescription_ShockWave[] = _("A rapid jolt of\nelectricity strikes\
 const u8 gMoveDescription_WaterPulse[] = _("An attack with a\npulsing blast of\nwater. It may also\nconfuse the foe.");
 const u8 gMoveDescription_ShadowSneak[] = _("The user stretches\ntheir shadow to\nhit from behind.\nAlways goes first.");
 const u8 gMoveDescription_DarkPulse[] = _("An attack with a\nhorrifyingly evil\naura. It may make\nthe foe flinch.");
+const u8 gMoveDescription_ZenHeadbutt[] = _("Focuses willpower\nto the head, then\nrams. It may make\nthe foe flinch.");
+const u8 gMoveDescription_Hurricane[] = _("Vicious wind lifts\nthe foe into the\nair. This may also\nconfuse it.");
+const u8 gMoveDescription_FlashCannon[] = _("Releases lots of\nlight energy, all\nat once. May cut\nthe foe's SP. DEF.");
+const u8 gMoveDescription_IceShard[] = _("Hurls flash-frozen\nice with high speed\nat the foe. It\nalways goes first.");
+const u8 gMoveDescription_NightSlash[] = _("Slices the foe at\na moment's notice.\nHas a high critical\nhit ratio.");
+const u8 gMoveDescription_TripleAxel[] = _("Three twirl kicks\nwith rising power.\nEach one can miss\non its own.");
+const u8 gMoveDescription_AuraSphere[] = _("A burst of stored\naura power from\ndeep within. It\ncan't be evaded.");
+const u8 gMoveDescription_ChargeBeam[] = _("Shocks the foe with\nstored power. It\ncan often raise\nthe SP. ATK stat.");
+const u8 gMoveDescription_FlareBlitz[] = _("Charges the foe\nwhile cloaked in\nfire. This hurts\nthe user a bit.");
 const u8 gMoveDescription_DoomDesire[] = _("A move that attacks\nthe foe with a\nblast of light two\nturns after use.");
 const u8 gMoveDescription_PsychoBoost[] = _("An intense attack\nthat also sharply\nreduces the user's\nSP. ATK stat.");
 
@@ -713,6 +723,15 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_WATER_PULSE   - 1] = gMoveDescription_WaterPulse,
     [MOVE_SHADOW_SNEAK  - 1] = gMoveDescription_ShadowSneak,
     [MOVE_DARK_PULSE    - 1] = gMoveDescription_DarkPulse,
+    [MOVE_ZEN_HEADBUTT  - 1] = gMoveDescription_ZenHeadbutt,
+    [MOVE_HURRICANE     - 1] = gMoveDescription_Hurricane,
+    [MOVE_FLASH_CANNON  - 1] = gMoveDescription_FlashCannon,
+    [MOVE_ICE_SHARD     - 1] = gMoveDescription_IceShard,
+    [MOVE_NIGHT_SLASH   - 1] = gMoveDescription_NightSlash,
+    [MOVE_TRIPLE_AXEL   - 1] = gMoveDescription_TripleAxel,
+    [MOVE_AURA_SPHERE   - 1] = gMoveDescription_AuraSphere,
+    [MOVE_CHARGE_BEAM   - 1] = gMoveDescription_ChargeBeam,
+    [MOVE_FLARE_BLITZ   - 1] = gMoveDescription_FlareBlitz,
     [MOVE_DOOM_DESIRE   - 1] = gMoveDescription_DoomDesire,
     [MOVE_PSYCHO_BOOST  - 1] = gMoveDescription_PsychoBoost,
 };

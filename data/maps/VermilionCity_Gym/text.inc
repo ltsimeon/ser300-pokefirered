@@ -63,8 +63,8 @@ VermilionCity_Gym_Text_BailyDefeat::
 
 VermilionCity_Gym_Text_BailyPostBattle::
     .string "Okay, I'll talk!\p"
-    .string "LT. SURGE said he hid door\n"
-    .string "switches inside something.$"
+    .string "About, like, cabling or something.\n"
+	.string "Already did my part, kid.$"
 
 VermilionCity_Gym_Text_DwayneIntro::
     .string "This is no place for kids!\n"
@@ -77,10 +77,7 @@ VermilionCity_Gym_Text_DwayneDefeat::
 VermilionCity_Gym_Text_DwaynePostBattle::
     .string "LT. SURGE installed the traps in\n"
     .string "the GYM himself.\p"
-    .string "He set up double locks everywhere.\n"
-    .string "Let me give you a hint.\p"
-    .string "When you open the first lock, the\n"
-    .string "second lock is right next to it.$"
+    .string "He set up double locks everywhere.$"
 
 VermilionCity_Gym_Text_GymGuyAdvice::
     .string "Yo!\n"
@@ -90,12 +87,13 @@ VermilionCity_Gym_Text_GymGuyAdvice::
     .string "Lightning American!\p"
     .string "He's an expert on electric\n"
     .string "POKéMON.\p"
-    .string "BIRD/WATER-type POKéMON match\n"
+    .string "FLYING/WATER-type POKéMON match\n"
     .string "poorly against the ELECTRIC type.\p"
     .string "Beware of paralysis, too.\p"
     .string "LT. SURGE is very cautious.\p"
     .string "He's locked himself in, so it won't\n"
-    .string "be easy getting to him.$"
+    .string "be easy getting to him.\p"
+    .string "Maybe if you beat some trainers?$"
 
 VermilionCity_Gym_Text_GymGuyPostVictory::
     .string "Whew!\n"
@@ -118,8 +116,6 @@ VermilionCity_Gym_Text_NopeOnlyTrashHere::
     .string "There's only trash here.$"
 
 VermilionCity_Gym_Text_SwitchUnderTrashFirstLockOpened::
-    .string "Hey! There's a switch under the\n"
-    .string "trash! Turn it on!\p"
     .string "The first electric lock opened!$"
 
 VermilionCity_Gym_Text_AnotherSwitchInTrash::

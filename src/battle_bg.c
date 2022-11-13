@@ -667,11 +667,17 @@ void LoadBattleMenuWindowGfx(void)
 {
     TextWindow_SetUserSelectedFrame(2, 0x012, 0x10);
     TextWindow_SetUserSelectedFrame(2, 0x022, 0x10);
+	
+	// Loading in the colors for physical/special highlighting
+	gPlttBufferUnfaded[0x51] = RGB(30, 16, 2);
+	gPlttBufferUnfaded[0x52] = RGB(2, 16, 30);
+	gPlttBufferUnfaded[0x53] = RGB(9, 9, 9);
+	
     gPlttBufferUnfaded[0x5C] = RGB( 9,  9,  9);
     gPlttBufferUnfaded[0x5D] = RGB( 9,  9,  9);
     gPlttBufferUnfaded[0x5E] = RGB(31, 31, 31);
     gPlttBufferUnfaded[0x5F] = RGB( 26,  26,  25);
-    CpuCopy16(&gPlttBufferUnfaded[0x5C], &gPlttBufferFaded[0x5C], 8);
+    CpuCopy16(&gPlttBufferUnfaded[0x50], &gPlttBufferFaded[0x50], 32);
     if (gBattleTypeFlags & (BATTLE_TYPE_FIRST_BATTLE | BATTLE_TYPE_POKEDUDE))
     {
         Menu_LoadStdPalAt(0x70);

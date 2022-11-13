@@ -88,7 +88,7 @@ FuchsiaCity_Gym_Text_NatePostBattle::
 
 FuchsiaCity_Gym_Text_PhilIntro::
     .string "Stop right there!\p"
-    .string "The famed invisible walls of\n"
+    .string "The famed slowing tiles of\n"
     .string "FUCHSIA GYM have you frustrated?$"
 
 FuchsiaCity_Gym_Text_PhilDefeat::
@@ -96,10 +96,7 @@ FuchsiaCity_Gym_Text_PhilDefeat::
     .string "You've got it!$"
 
 FuchsiaCity_Gym_Text_PhilPostBattle::
-    .string "You impressed me!\n"
-    .string "Here's a hint!\p"
-    .string "Look very closely for gaps in the\n"
-    .string "invisible walls!$"
+    .string "You impressed me!$"
 
 FuchsiaCity_Gym_Text_EdgarIntro::
     .string "I also study the way of the ninja\n"
@@ -131,12 +128,12 @@ FuchsiaCity_Gym_Text_ShawnPostBattle::
 FuchsiaCity_Gym_Text_GymGuyAdvice::
     .string "Yo!\n"
     .string "Champ in the making!\p"
-    .string "FUCHSIA GYM is a tricked-up place.\n"
-    .string "It's riddled with invisible walls!\p"
-    .string "KOGA might appear close, but he's\n"
-    .string "blocked off.\p"
-    .string "You have to find gaps in the walls\n"
-    .string "to reach him.$"
+    .string "FUCHSIA GYM is a tricked-up place.\p"
+    .string "These tiles are coated in sticky\n"
+    .string "POKéMON poison, so they are pretty\n"
+    .string "tough to walk over.\p"
+    .string "Seems like his students have trained\n"
+    .string "to travel over it just fine, though.$"
 
 FuchsiaCity_Gym_Text_GymGuyPostVictory::
     .string "It's amazing how ninja can terrify,\n"

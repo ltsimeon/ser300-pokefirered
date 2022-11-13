@@ -354,6 +354,15 @@ const u8 gMoveNames[][13] = {
     _("WATER PULSE"),
     _("SHADOW SNEAK"),
     _("DARK PULSE"),
+	_("ZEN HEADBUTT"),
+	_("HURRICANE"),
+	_("FLASH CANNON"),
+	_("ICE SHARD"),
+	_("NIGHT SLASH"),
+	_("TRIPLE AXEL"),
+	_("AURA SPHERE"),
+	_("CHARGE BEAM"),
+	_("FLARE BLITZ"),
     _("DOOM DESIRE"),
     _("PSYCHO BOOST")
 };

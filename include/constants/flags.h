@@ -624,7 +624,7 @@
 #define FLAG_0x25F                                       0x25F
 #define FLAG_0x260                                       0x260
 #define FLAG_0x261                                       0x261
-#define FLAG_0x262                                       0x262
+#define FLAG_BEAT_TWO_VERMILION_TRAINERS	             0x262
 #define FLAG_GOT_EEVEE                                   0x263
 #define FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES           0x264
 #define FLAG_CINNABAR_GYM_QUIZ_1                         0x265

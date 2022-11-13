@@ -1,18 +1,19 @@
-#include "constants/global.h"
-#include "constants/moves.h"
-#include "constants/battle.h"
-#include "constants/battle_move_effects.h"
-#include "constants/battle_script_commands.h"
-#include "constants/battle_anim.h"
-#include "constants/items.h"
-#include "constants/abilities.h"
-#include "constants/species.h"
-#include "constants/pokemon.h"
-#include "constants/songs.h"
-#include "constants/trainers.h"
-#include "constants/game_stat.h"
-#include "constants/battle_string_ids.h"
-	.include "asm/macros/battle_script.inc"
+#include "../include/constants/global.h"
+#include "../include/constants/moves.h"
+#include "../include/constants/battle.h"
+#include "../include/constants/battle_move_effects.h"
+#include "../include/constants/battle_script_commands.h"
+#include "../include/constants/battle_anim.h"
+#include "../include/constants/items.h"
+#include "../include/constants/abilities.h"
+#include "../include/constants/species.h"
+#include "../include/constants/pokemon.h"
+#include "../include/constants/songs.h"
+#include "../include/constants/trainers.h"
+#include "../include/constants/game_stat.h"
+#include "../include/constants/battle_string_ids.h"
+
+.include "asm/macros/battle_script.inc"
 @ Define these here since misc_constants.inc conflicts with the C headers
 	.set NULL, 0
 	.set FALSE, 0
@@ -235,6 +236,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectCalmMind               @ EFFECT_CALM_MIND
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
+    .4byte BattleScript_EffectSpAtkUpHit             @ EFFECT_SP_ATK_UP_HIT
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler
@@ -1763,6 +1765,10 @@ BattleScript_EffectDefenseUpHit::
 
 BattleScript_EffectAttackUpHit::
 	setmoveeffect MOVE_EFFECT_ATK_PLUS_1 | MOVE_EFFECT_AFFECTS_USER
+	goto BattleScript_EffectHit
+        
+BattleScript_EffectSpAtkUpHit::
+	setmoveeffect MOVE_EFFECT_SP_ATK_PLUS_1   | MOVE_EFFECT_AFFECTS_USER
 	goto BattleScript_EffectHit
 
 BattleScript_EffectAllStatsUpHit::
