@@ -364,5 +364,7 @@ const u8 gMoveNames[][13] = {
 	_("CHARGE BEAM"),
 	_("FLARE BLITZ"),
     _("DOOM DESIRE"),
+    _("SMART STRIKE"),
+    _("GRAND ARROWS"),
     _("PSYCHO BOOST")
 };

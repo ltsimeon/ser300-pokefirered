@@ -5357,7 +5357,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_CooltrainerNaomi[] = {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_RAPIDASH,
-        .moves = {MOVE_FURY_ATTACK, MOVE_FIRE_SPIN, MOVE_STOMP, MOVE_GROWL},
+        .moves = {MOVE_SMART_STRIKE, MOVE_FIRE_SPIN, MOVE_STOMP, MOVE_GROWL},
     },
     {
         .iv = 100,
@@ -5456,7 +5456,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_CooltrainerJulie[] = {
         .iv = 100,
         .lvl = 42,
         .species = SPECIES_RAPIDASH,
-        .moves = {MOVE_FURY_ATTACK, MOVE_FIRE_SPIN, MOVE_TAKE_DOWN, MOVE_AGILITY},
+        .moves = {MOVE_SMART_STRIKE, MOVE_FIRE_SPIN, MOVE_TAKE_DOWN, MOVE_AGILITY},
     },
     {
         .iv = 100,
@@ -8546,7 +8546,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_CooltrainerMichelle[] = {
         .iv = 100,
         .lvl = 48,
         .species = SPECIES_RAPIDASH,
-        .moves = {MOVE_BOUNCE, MOVE_AGILITY, MOVE_FIRE_SPIN, MOVE_TAKE_DOWN},
+        .moves = {MOVE_BOUNCE, MOVE_SMART_STRIKE, MOVE_FLARE_BLITZ, MOVE_TAKE_DOWN},
     },
     {
         .iv = 100,
@@ -10527,7 +10527,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_CooltrainerMichelle2[] = 
         .iv = 220,
         .lvl = 54,
         .species = SPECIES_RAPIDASH,
-        .moves = {MOVE_BOUNCE, MOVE_AGILITY, MOVE_FIRE_SPIN, MOVE_TAKE_DOWN},
+        .moves = {MOVE_BOUNCE, MOVE_SMART_STRIKE, MOVE_FLARE_BLITZ, MOVE_TAKE_DOWN},
     },
     {
         .iv = 220,

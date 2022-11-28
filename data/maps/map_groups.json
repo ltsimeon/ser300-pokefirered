@@ -90,8 +90,8 @@
     "UndergroundPath_EastWestTunnel",
     "UndergroundPath_EastEntrance",
     "DiglettsCave_NorthEntrance",
-    "DiglettsCave_B1F",
     "DiglettsCave_SouthEntrance",
+    "DiglettsCave_B1F",
     "VictoryRoad_1F",
     "VictoryRoad_2F",
     "VictoryRoad_3F",
@@ -177,7 +177,9 @@
     "SixIsland_PatternBush",
     "SixIsland_AlteringCave",
     "DiglettsCave_WestEntrance",
-    "DiglettsCave_EastEntrance"
+    "DiglettsCave_EastEntrance",
+    "DiglettsCave_B2F",
+    "DiglettsCave_B2F_ZygardeRoom"
   ],
   "gMapGroup_SpecialArea": [
     "NavelRock_Exterior",

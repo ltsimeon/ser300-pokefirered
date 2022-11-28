@@ -181,8 +181,7 @@
 #define FLAG_HIDE_MISC_KANTO_ROCKETS                       0x0AD
 #define FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS 0x0AE
 
-// Unused?
-#define FLAG_0x0AF               0x0AF
+#define FLAG_0x0AF				 0x0AF
 #define FLAG_0x0B0               0x0B0
 #define FLAG_0x0B1               0x0B1
 #define FLAG_0x0B2               0x0B2
@@ -755,7 +754,7 @@
 #define FLAG_GOT_NUGGET_FROM_DUNSPARCE_TUNNEL            0x2E2
 #define FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE             0x2E3
 #define FLAG_FOUGHT_DEOXYS                               0x2E4
-#define FLAG_0x2E5                                       0x2E5
+#define FLAG_ZYGARDE_DEFEATED                            0x2E5
 #define FLAG_0x2E6                                       0x2E6
 #define FLAG_0x2E7                                       0x2E7
 #define FLAG_0x2E8                                       0x2E8
@@ -1215,9 +1214,8 @@
 #define HIDDEN_ITEM_ROUTE7_POMEG_BERRY                                192
 #define HIDDEN_ITEM_ROUTE7_PERSIM_BERRY                               193
 #define HIDDEN_ITEM_ROUTE7_CHESTO_BERRY                               194
+#define HIDDEN_ITEM_ROUTE10_LAVA_COOKIE								  195
 
-// Unused?
-#define FLAG_0x4AB               0x4AB
 #define FLAG_0x4AC               0x4AC
 #define FLAG_0x4AD               0x4AD
 #define FLAG_0x4AE               0x4AE

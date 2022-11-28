@@ -164,6 +164,7 @@ const u16 gObjectEventPic_Pikachu[] = INCBIN_U16("graphics/object_events/pics/po
 const u16 gObjectEventPic_Jigglypuff[] = INCBIN_U16("graphics/object_events/pics/pokemon/jigglypuff.4bpp");
 const u16 gObjectEventPic_Pidgey[] = INCBIN_U16("graphics/object_events/pics/pokemon/pidgey.4bpp");
 const u16 gObjectEventPic_Clefairy[] = INCBIN_U16("graphics/object_events/pics/pokemon/clefairy.4bpp");
+const u16 gObjectEventPic_Zygarde[] = INCBIN_U16("graphics/object_events/pics/pokemon/zygarde.4bpp");
 const u16 gObjectEventPic_CutTree[] = INCBIN_U16("graphics/object_events/pics/misc/cut_tree.4bpp");
 const u16 gObjectEventPic_RockSmashRock[] = INCBIN_U16("graphics/object_events/pics/misc/rock_smash_rock.4bpp");
 const u16 gObjectEventPic_StrengthBoulder[] = INCBIN_U16("graphics/object_events/pics/misc/strength_boulder.4bpp");

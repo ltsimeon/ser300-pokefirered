@@ -810,10 +810,11 @@ static const u16 sDexCategory_RarePkmn_Page6[] = {
 
 static const u16 sDexCategory_RarePkmn_Page7[] = {
     SPECIES_MEWTWO,
+	SPECIES_MEW,
 };
 
 static const u16 sDexCategory_RarePkmn_Page8[] = {
-    SPECIES_MEW,
+    SPECIES_ZYGARDE,
 };
 
 #define DEX_CATEGORY(name){sDexCategory_##name, NELEMS(sDexCategory_##name)}

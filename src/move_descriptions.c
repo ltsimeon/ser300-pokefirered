@@ -366,6 +366,8 @@ const u8 gMoveDescription_AuraSphere[] = _("A burst of stored\naura power from\n
 const u8 gMoveDescription_ChargeBeam[] = _("Shocks the foe with\nstored power. It\ncan often raise\nthe SP. ATK stat.");
 const u8 gMoveDescription_FlareBlitz[] = _("Charges the foe\nwhile cloaked in\nfire. This hurts\nthe user a bit.");
 const u8 gMoveDescription_DoomDesire[] = _("A move that attacks\nthe foe with a\nblast of light two\nturns after use.");
+const u8 gMoveDescription_SmartStrike[] = _("A focused stab with\na sharpened horn.\nCan't be evaded.\n");
+const u8 gMoveDescription_ThousandArrows[] = _("Earth's energy rains\non both foes. The\nFLYING type isn't\nimmune to it.");
 const u8 gMoveDescription_PsychoBoost[] = _("An intense attack\nthat also sharply\nreduces the user's\nSP. ATK stat.");
 
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
@@ -733,5 +735,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] = {
     [MOVE_CHARGE_BEAM   - 1] = gMoveDescription_ChargeBeam,
     [MOVE_FLARE_BLITZ   - 1] = gMoveDescription_FlareBlitz,
     [MOVE_DOOM_DESIRE   - 1] = gMoveDescription_DoomDesire,
+    [MOVE_SMART_STRIKE  - 1] = gMoveDescription_SmartStrike,
+    [MOVE_THOUSAND_ARROWS-1] = gMoveDescription_ThousandArrows,
     [MOVE_PSYCHO_BOOST  - 1] = gMoveDescription_PsychoBoost,
 };

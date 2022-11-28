@@ -1,0 +1,30 @@
+mapscripts DiglettsCave_B2F_ZygardeRoom_MapScripts {
+	MAP_SCRIPT_ON_RESUME {
+		if(flag(FLAG_SYS_SPECIAL_WILD_BATTLE)) {
+			specialvar(VAR_RESULT, GetBattleOutcome)
+			if(var(VAR_RESULT) == B_OUTCOME_CAUGHT) {
+				removeobject(VAR_LAST_TALKED)
+			}
+		}
+	}
+}
+
+script DiglettsCave_B2FZ_Zygarde {
+	lock
+	goto_if_questlog(EventScript_ReleaseEnd)
+	special(QuestLog_CutRecording)
+	playmoncry(SPECIES_ZYGARDE, CRY_MODE_ENCOUNTER)
+	msgbox("Hhhhsssszai!")
+	delay(40)
+	waitmoncry
+	setvar(VAR_LAST_TALKED, 1)
+	setwildbattle(SPECIES_ZYGARDE, 50)
+	setflag(FLAG_SYS_SPECIAL_WILD_BATTLE)
+	special(StartLegendaryBattle)
+	waitstate
+	clearflag(FLAG_SYS_SPECIAL_WILD_BATTLE)
+	setflag(FLAG_ZYGARDE_DEFEATED)
+	goto(EventScript_RemoveStaticMon)
+	release
+	end
+}

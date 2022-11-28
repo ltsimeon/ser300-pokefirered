@@ -5045,4 +5045,16 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 337,
         .trainerOffset = -2,
     },
+	[NATIONAL_DEX_ZYGARDE] = 
+	{
+		.categoryName = _("ORDER"),
+        .height = 50,
+        .weight = 3050,
+        .description = gZygardePokedexText,
+        .unusedDescription = gZygardePokedexTextUnused,
+        .pokemonScale = 288,
+        .pokemonOffset = -1,
+        .trainerScale = 512,
+        .trainerOffset = 11,
+	},
 };

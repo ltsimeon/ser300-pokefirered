@@ -9407,5 +9407,29 @@ static const u32 sTMHMLearnsets[][2] =
                                         | TMHM(TM43_SECRET_POWER)
                                         | TMHM(TM44_REST)
                                         | TMHM(TM45_ATTRACT)),
-
+										
+	[SPECIES_ZYGARDE]	  = TMHM_LEARNSET(TMHM(TM02_DRAGON_CLAW)
+                                        | TMHM(TM06_TOXIC)
+                                        | TMHM(TM10_HIDDEN_POWER)
+                                        | TMHM(TM11_SUNNY_DAY)
+                                        | TMHM(TM15_HYPER_BEAM)
+                                        | TMHM(TM17_PROTECT)
+                                        | TMHM(TM19_GIGA_DRAIN)
+                                        | TMHM(TM21_FRUSTRATION)
+                                        | TMHM(TM22_SOLAR_BEAM)
+                                        | TMHM(TM23_IRON_TAIL)
+                                        | TMHM(TM26_EARTHQUAKE)
+                                        | TMHM(TM27_RETURN)
+                                        | TMHM(TM28_DIG)
+                                        | TMHM(TM32_DOUBLE_TEAM)
+										| TMHM(TM34_SHOCK_WAVE)
+										| TMHM(TM36_SLUDGE_BOMB)
+                                        | TMHM(TM37_SANDSTORM)
+                                        | TMHM(TM39_ROCK_TOMB)
+                                        | TMHM(TM42_FACADE)
+                                        | TMHM(TM43_SECRET_POWER)
+                                        | TMHM(TM44_REST)
+                                        | TMHM(TM45_ATTRACT)
+                                        | TMHM(HM04_STRENGTH)
+                                        | TMHM(HM06_ROCK_SMASH)),
 };

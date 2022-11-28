@@ -2728,6 +2728,13 @@ const u32 gMonShinyPalette_Cryogonal[] = INCBIN_U32("graphics/pokemon/cryogonal/
 const u8 gMonIcon_Cryogonal[] = INCBIN_U8("graphics/pokemon/cryogonal/icon.4bpp");
 const u8 gMonFootprint_Cryogonal[] = INCBIN_U8("graphics/pokemon/cryogonal/footprint.1bpp");
 
+const u32 gMonFrontPic_Zygarde[] = INCBIN_U32("graphics/pokemon/zygarde/front.4bpp.lz");
+const u32 gMonPalette_Zygarde[] = INCBIN_U32("graphics/pokemon/zygarde/normal.gbapal.lz");
+const u32 gMonBackPic_Zygarde[] = INCBIN_U32("graphics/pokemon/zygarde/back.4bpp.lz");
+const u32 gMonShinyPalette_Zygarde[] = INCBIN_U32("graphics/pokemon/zygarde/shiny.gbapal.lz");
+const u8 gMonIcon_Zygarde[] = INCBIN_U8("graphics/pokemon/zygarde/icon.4bpp");
+const u8 gMonFootprint_Zygarde[] = INCBIN_U8("graphics/pokemon/zygarde/footprint.1bpp");
+
 const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/front.4bpp.lz");
 const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
 

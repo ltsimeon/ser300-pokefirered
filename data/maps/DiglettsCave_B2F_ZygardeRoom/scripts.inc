@@ -1,0 +1,41 @@
+DiglettsCave_B2F_ZygardeRoom_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, DiglettsCave_B2F_ZygardeRoom_MapScripts_MAP_SCRIPT_ON_RESUME
+	.byte 0
+
+DiglettsCave_B2F_ZygardeRoom_MapScripts_MAP_SCRIPT_ON_RESUME:
+	goto_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, DiglettsCave_B2F_ZygardeRoom_MapScripts_MAP_SCRIPT_ON_RESUME_1
+	return
+
+DiglettsCave_B2F_ZygardeRoom_MapScripts_MAP_SCRIPT_ON_RESUME_1:
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_eq DiglettsCave_B2F_ZygardeRoom_MapScripts_MAP_SCRIPT_ON_RESUME_3
+	return
+
+DiglettsCave_B2F_ZygardeRoom_MapScripts_MAP_SCRIPT_ON_RESUME_3:
+	removeobject VAR_LAST_TALKED
+	return
+
+
+DiglettsCave_B2FZ_Zygarde::
+	lock
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	playmoncry SPECIES_ZYGARDE, CRY_MODE_ENCOUNTER
+	msgbox DiglettsCave_B2FZ_Zygarde_Text_0
+	delay 40
+	waitmoncry
+	setvar VAR_LAST_TALKED, 1
+	setwildbattle SPECIES_ZYGARDE, 50
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	setflag FLAG_ZYGARDE_DEFEATED
+	goto EventScript_RemoveStaticMon
+	release
+	end
+
+
+DiglettsCave_B2FZ_Zygarde_Text_0:
+	.string "Hhhhsssszai!$"

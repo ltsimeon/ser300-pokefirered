@@ -1,41 +1,41 @@
-#include "global.h"
-#include "gflib.h"
-#include "item.h"
-#include "util.h"
-#include "random.h"
-#include "pokedex.h"
-#include "money.h"
-#include "pokemon_icon.h"
-#include "mail.h"
-#include "event_data.h"
-#include "strings.h"
-#include "pokemon_special_anim.h"
-#include "pokemon_storage_system.h"
-#include "pokemon_summary_screen.h"
-#include "task.h"
-#include "naming_screen.h"
-#include "overworld.h"
-#include "party_menu.h"
-#include "trainer_pokemon_sprites.h"
-#include "field_specials.h"
-#include "battle.h"
-#include "battle_message.h"
-#include "battle_anim.h"
-#include "battle_ai_script_commands.h"
-#include "battle_scripts.h"
-#include "reshow_battle_screen.h"
-#include "battle_controllers.h"
-#include "battle_interface.h"
-#include "constants/battle_anim.h"
-#include "constants/battle_move_effects.h"
-#include "constants/battle_script_commands.h"
-#include "constants/items.h"
-#include "constants/hold_effects.h"
-#include "constants/songs.h"
-#include "constants/moves.h"
-#include "constants/abilities.h"
-#include "constants/pokemon.h"
-#include "constants/maps.h"
+#include "../include/global.h"
+#include "../include/gflib.h"
+#include "../include/item.h"
+#include "../include/util.h"
+#include "../include/random.h"
+#include "../include/pokedex.h"
+#include "../include/money.h"
+#include "../include/pokemon_icon.h"
+#include "../include/mail.h"
+#include "../include/event_data.h"
+#include "../include/strings.h"
+#include "../include/pokemon_special_anim.h"
+#include "../include/pokemon_storage_system.h"
+#include "../include/pokemon_summary_screen.h"
+#include "../include/task.h"
+#include "../include/naming_screen.h"
+#include "../include/overworld.h"
+#include "../include/party_menu.h"
+#include "../include/trainer_pokemon_sprites.h"
+#include "../include/field_specials.h"
+#include "../include/battle.h"
+#include "../include/battle_message.h"
+#include "../include/battle_anim.h"
+#include "../include/battle_ai_script_commands.h"
+#include "../include/battle_scripts.h"
+#include "../include/reshow_battle_screen.h"
+#include "../include/battle_controllers.h"
+#include "../include/battle_interface.h"
+#include "../include/constants/battle_anim.h"
+#include "../include/constants/battle_move_effects.h"
+#include "../include/constants/battle_script_commands.h"
+#include "../include/constants/items.h"
+#include "../include/constants/hold_effects.h"
+#include "../include/constants/songs.h"
+#include "../include/constants/moves.h"
+#include "../include/constants/abilities.h"
+#include "../include/constants/pokemon.h"
+#include "../include/constants/maps.h"
 
 extern const u8 *const gBattleScriptsForMoveEffects[];
 
@@ -1239,6 +1239,10 @@ void AI_CalcDmg(u8 attacker, u8 defender)
 
 static void ModulateDmgByType(u8 multiplier)
 {
+    if (gBattleMoves[gCurrentMove].effect == EFFECT_FLYING_PIERCE && multiplier == 0 &&
+    (gBattleMons[gBattlerTarget].type1 == TYPE_FLYING || gBattleMons[gBattlerTarget].type2 == TYPE_FLYING))
+        multiplier = 10;
+
     gBattleMoveDamage = gBattleMoveDamage * multiplier / 10;
     if (gBattleMoveDamage == 0 && multiplier != 0)
         gBattleMoveDamage = 1;
@@ -1291,7 +1295,8 @@ static void Cmd_typecalc(void)
         gBattleMoveDamage = gBattleMoveDamage / 10;
     }
 
-    if (gBattleMons[gBattlerTarget].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND)
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND
+        && !(gBattleMoves[gCurrentMove].effect == EFFECT_FLYING_PIERCE))
     {
         gLastUsedAbility = gBattleMons[gBattlerTarget].ability;
         gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
@@ -1353,7 +1358,8 @@ static void CheckWonderGuardAndLevitate(void)
 
     GET_MOVE_TYPE(gCurrentMove, moveType);
 
-    if (gBattleMons[gBattlerTarget].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND)
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND
+       && !(gBattleMoves[gCurrentMove].effect == EFFECT_FLYING_PIERCE))
     {
         gLastUsedAbility = ABILITY_LEVITATE;
         gBattleCommunication[MISS_TYPE] = B_MSG_GROUND_MISS;
@@ -1420,6 +1426,10 @@ static void CheckWonderGuardAndLevitate(void)
 // Same as ModulateDmgByType except different arguments
 static void ModulateDmgByType2(u8 multiplier, u16 move, u8 *flags)
 {
+    if (gBattleMoves[gCurrentMove].effect == EFFECT_FLYING_PIERCE && multiplier == 0 &&
+    (gBattleMons[gBattlerTarget].type1 == TYPE_FLYING || gBattleMons[gBattlerTarget].type2 == TYPE_FLYING))
+        multiplier = 10;
+
     gBattleMoveDamage = gBattleMoveDamage * multiplier / 10;
     if (gBattleMoveDamage == 0 && multiplier != 0)
         gBattleMoveDamage = 1;
@@ -1470,7 +1480,8 @@ u8 TypeCalc(u16 move, u8 attacker, u8 defender)
         gBattleMoveDamage = gBattleMoveDamage / 10;
     }
 
-    if (gBattleMons[defender].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND)
+    if (gBattleMons[defender].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND
+     && !(gBattleMoves[gCurrentMove].effect == EFFECT_FLYING_PIERCE))
     {
         flags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
     }
@@ -1522,7 +1533,8 @@ u8 AI_TypeCalc(u16 move, u16 targetSpecies, u8 targetAbility)
 
     moveType = gBattleMoves[move].type;
 
-    if (targetAbility == ABILITY_LEVITATE && moveType == TYPE_GROUND)
+    if (targetAbility == ABILITY_LEVITATE && moveType == TYPE_GROUND
+     && !(gBattleMoves[gCurrentMove].effect == EFFECT_FLYING_PIERCE))
     {
         flags = MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE;
     }
@@ -4349,7 +4361,8 @@ static void Cmd_typecalc2(void)
     s32 i = 0;
     u8 moveType = gBattleMoves[gCurrentMove].type;
 
-    if (gBattleMons[gBattlerTarget].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND)
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND
+       && !(gBattleMoves[gCurrentMove].effect == EFFECT_FLYING_PIERCE))
     {
         gLastUsedAbility = gBattleMons[gBattlerTarget].ability;
         gMoveResultFlags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);

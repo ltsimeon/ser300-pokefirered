@@ -412,4 +412,5 @@ const u8 gSpeciesNames[][11] = {
     _("DEOXYS"),
     _("CHIMECHO"),
     _("CRYOGONAL"),
+	_("ZYGARDE"),
 };

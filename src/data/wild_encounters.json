@@ -1870,6 +1870,36 @@
               }
             ]
           },
+          "rock_smash_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 35,
+                "max_level": 45,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 30,
+                "max_level": 50,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 25,
+                "max_level": 55,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 20,
+                "max_level": 60,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 15,
+                "max_level": 65,
+                "species": "SPECIES_DUGTRIO"
+              }
+            ]
+          },
           "fishing_mons": {
             "encounter_rate": 10,
             "mons": [
@@ -25462,6 +25492,105 @@
                 "min_level": 35,
                 "max_level": 45,
                 "species": "SPECIES_BLAZIKEN"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_DIGLETTS_CAVE_B2F",
+          "base_label": "sDiglettsCaveB2F_Firered",
+          "land_mons": {
+            "encounter_rate": 6,
+            "mons": [
+              {
+                "min_level": 35,
+                "max_level": 40,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 35,
+                "max_level": 40,
+                "species": "SPECIES_PUPITAR"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_TRAPINCH"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_TRAPINCH"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_GLIGAR"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_GLIGAR"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_GLIGAR"
+              },
+              {
+                "min_level": 35,
+                "max_level": 40,
+                "species": "SPECIES_PUPITAR"
+              },
+              {
+                "min_level": 35,
+                "max_level": 40,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 35,
+                "max_level": 40,
+                "species": "SPECIES_VIBRAVA"
+              },
+              {
+                "min_level": 35,
+                "max_level": 40,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 35,
+                "max_level": 40,
+                "species": "SPECIES_VIBRAVA"
+              }
+            ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 35,
+                "max_level": 45,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 35,
+                "max_level": 45,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 35,
+                "max_level": 45,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 35,
+                "max_level": 45,
+                "species": "SPECIES_DUGTRIO"
+              },
+              {
+                "min_level": 35,
+                "max_level": 45,
+                "species": "SPECIES_DUGTRIO"
               }
             ]
           }

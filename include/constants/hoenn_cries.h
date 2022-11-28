@@ -139,6 +139,7 @@ enum
     CRY_DEOXYS = 386,
     CRY_CHIMECHO = 387,
     CRY_CRYOGONAL = 388,
+	CRY_ZYGARDE = 389,
 };
 
 #endif

@@ -50,8 +50,8 @@
 #define MAP_UNDERGROUND_PATH_EAST_WEST_TUNNEL    (34 | (1 << 8))
 #define MAP_UNDERGROUND_PATH_EAST_ENTRANCE       (35 | (1 << 8))
 #define MAP_DIGLETTS_CAVE_NORTH_ENTRANCE         (36 | (1 << 8))
-#define MAP_DIGLETTS_CAVE_B1F                    (37 | (1 << 8))
-#define MAP_DIGLETTS_CAVE_SOUTH_ENTRANCE         (38 | (1 << 8))
+#define MAP_DIGLETTS_CAVE_SOUTH_ENTRANCE         (37 | (1 << 8))
+#define MAP_DIGLETTS_CAVE_B1F                    (38 | (1 << 8))
 #define MAP_VICTORY_ROAD_1F                      (39 | (1 << 8))
 #define MAP_VICTORY_ROAD_2F                      (40 | (1 << 8))
 #define MAP_VICTORY_ROAD_3F                      (41 | (1 << 8))
@@ -138,6 +138,8 @@
 #define MAP_SIX_ISLAND_ALTERING_CAVE             (122 | (1 << 8))
 #define MAP_DIGLETTS_CAVE_WEST_ENTRANCE          (123 | (1 << 8))
 #define MAP_DIGLETTS_CAVE_EAST_ENTRANCE          (124 | (1 << 8))
+#define MAP_DIGLETTS_CAVE_B2F                    (125 | (1 << 8))
+#define MAP_DIGLETTS_CAVE_B2F_ZYGARDE_ROOM       (126 | (1 << 8))
 
 // gMapGroup_SpecialArea
 #define MAP_NAVEL_ROCK_EXTERIOR                       (0 | (2 << 8))

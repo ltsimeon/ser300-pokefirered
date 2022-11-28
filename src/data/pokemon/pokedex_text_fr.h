@@ -2725,3 +2725,10 @@ const u8 gCryogonalPokedexText[] = _(
     "CRYOGONAL are never seen in summer.");
 
 const u8 gCryogonalPokedexTextUnused[] = _("");
+
+const u8 gZygardePokedexText[] = _(
+	"It is hypothesized that ZYGARDE is\n"
+	"monitoring those who destroy the\n"
+	"ecosystem from deep within its cavern.");
+
+const u8 gZygardePokedexTextUnused[] = _("");

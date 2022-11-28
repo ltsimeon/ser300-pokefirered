@@ -1,0 +1,123 @@
+mapscripts DiglettsCave_B2F_MapScripts {
+	MAP_SCRIPT_ON_TRANSITION {
+		if(flag(FLAG_ZYGARDE_DEFEATED)) {
+			setmetatile(14, 16, 657, 0)
+			setmetatile(14, 17, 657, 0)
+			setmetatile(14, 18, 657, 0)
+			special(DrawWholeMapView)
+		}
+	}
+}
+
+script DiglettsCave_B2F_WarningSign {
+	lock
+	msgbox(format("Those who dare to unseal\nthe guardian of order..."))
+	msgbox(format("Let four stones come to rest,\none on each switch..."))
+	msgbox(format("And face off against\nthe guardians of each..."))
+	msgbox(format("Once all are defeated, all at once,\nonly then may you face ZYGARDE."))
+	release
+	end
+}
+
+script DiglettsCave_B2F_BottomLeftSwitch{
+	lockall
+	if(var(VAR_TEMP_1) == 0) {
+		setvar(VAR_TEMP_1, 1)
+		goto_if_questlog(EventScript_ReleaseEnd)
+		faceplayer
+		setwildbattle(SPECIES_DUGTRIO, 45)
+		waitse
+		playmoncry(SPECIES_DUGTRIO, CRY_MODE_ENCOUNTER)
+		delay(40)
+		waitmoncry
+		setflag(FLAG_SYS_SPECIAL_WILD_BATTLE)
+		dowildbattle
+		clearflag(FLAG_SYS_SPECIAL_WILD_BATTLE)
+		special(QuestLog_CutRecording)
+		goto(DiglettsCave_B2F_CheckAllSwitchesPressed)
+	}	
+	releaseall
+	end
+}
+
+script DiglettsCave_B2F_BottomRightSwitch{
+	lockall
+	if(var(VAR_TEMP_2) == 0) {
+		setvar(VAR_TEMP_2, 1)
+		goto_if_questlog(EventScript_ReleaseEnd)
+		faceplayer
+		setwildbattle (SPECIES_GLIGAR, 45)
+		waitse
+		playmoncry (SPECIES_GLIGAR, CRY_MODE_ENCOUNTER)
+		delay(40)
+		waitmoncry
+		setflag(FLAG_SYS_SPECIAL_WILD_BATTLE)
+		dowildbattle
+		clearflag(FLAG_SYS_SPECIAL_WILD_BATTLE)
+		special(QuestLog_CutRecording)
+		goto(DiglettsCave_B2F_CheckAllSwitchesPressed)
+	}	
+	releaseall
+	end
+}
+
+script DiglettsCave_B2F_TopLeftSwitch{
+	lockall
+	if(var(VAR_TEMP_3) == 0) {
+		setvar(VAR_TEMP_3, 1)
+		goto_if_questlog(EventScript_ReleaseEnd)
+		faceplayer
+		setwildbattle (SPECIES_FLYGON, 45)
+		waitse
+		playmoncry (SPECIES_FLYGON, CRY_MODE_ENCOUNTER)
+		delay(40)
+		waitmoncry
+		setflag(FLAG_SYS_SPECIAL_WILD_BATTLE)
+		dowildbattle
+		clearflag(FLAG_SYS_SPECIAL_WILD_BATTLE)
+		special(QuestLog_CutRecording)
+		goto(DiglettsCave_B2F_CheckAllSwitchesPressed)
+	}	
+	releaseall
+	end
+}
+
+script DiglettsCave_B2F_TopRightSwitch{
+	lockall
+	if(var(VAR_TEMP_4) == 0) {
+		setvar(VAR_TEMP_4, 1)
+		goto_if_questlog(EventScript_ReleaseEnd)
+		faceplayer
+		setwildbattle (SPECIES_DUNSPARCE, 45)
+		waitse
+		playmoncry (SPECIES_DUNSPARCE, CRY_MODE_ENCOUNTER)
+		delay(40)
+		waitmoncry
+		setflag(FLAG_SYS_SPECIAL_WILD_BATTLE)
+		dowildbattle
+		clearflag(FLAG_SYS_SPECIAL_WILD_BATTLE)
+		special(QuestLog_CutRecording)
+		goto(DiglettsCave_B2F_CheckAllSwitchesPressed)
+	}	
+	releaseall
+	end
+}
+
+script DiglettsCave_B2F_CheckAllSwitchesPressed {
+	if(var(VAR_TEMP_1)) {
+		if(var(VAR_TEMP_2)) {
+			if(var(VAR_TEMP_3)) {
+				if(var(VAR_TEMP_4)) {
+					setmetatile(14, 16, 657, 0)
+					setmetatile(14, 17, 657, 0)
+					setmetatile(14, 18, 657, 0)
+					playse(SE_ICE_BREAK)
+					special(DrawWholeMapView)
+					waitse 
+				}
+			}
+		}
+	}
+	releaseall
+	end
+}

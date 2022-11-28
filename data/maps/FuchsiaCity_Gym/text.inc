@@ -130,8 +130,9 @@ FuchsiaCity_Gym_Text_GymGuyAdvice::
     .string "Champ in the making!\p"
     .string "FUCHSIA GYM is a tricked-up place.\p"
     .string "These tiles are coated in sticky\n"
-    .string "POKéMON poison, so they are pretty\n"
-    .string "tough to walk over.\p"
+    .string "POKéMON poison, so I'm sure\p" 
+	.string "they'll be pretty tough\n"
+    .string "to walk over.\p"
     .string "Seems like his students have trained\n"
     .string "to travel over it just fine, though.$"
 

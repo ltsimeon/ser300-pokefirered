@@ -14,6 +14,7 @@
 #include "../include/constants/battle_string_ids.h"
 
 .include "asm/macros/battle_script.inc"
+
 @ Define these here since misc_constants.inc conflicts with the C headers
 	.set NULL, 0
 	.set FALSE, 0
@@ -237,6 +238,11 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectDragonDance            @ EFFECT_DRAGON_DANCE
 	.4byte BattleScript_EffectCamouflage             @ EFFECT_CAMOUFLAGE
     .4byte BattleScript_EffectSpAtkUpHit             @ EFFECT_SP_ATK_UP_HIT
+    .4byte BattleScript_EffectFlyingPierce           @ EFFECT_FLYING_PIERCE
+
+BattleScript_EffectFlyingPierce::
+    orword gHitMarker, HITMARKER_IGNORE_ON_AIR
+    goto BattleScript_EffectHit
 
 BattleScript_EffectHit::
 	jumpifnotmove MOVE_SURF, BattleScript_HitFromAtkCanceler

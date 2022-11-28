@@ -1858,7 +1858,10 @@ Cry_Chimecho::
 	.align 2
 Cry_Cryogonal::
     .incbin "sound/direct_sound_samples/cry_cryogonal.bin"
-
+	
+	.align 2
+Cry_Zygarde::
+	.incbin "sound/direct_sound_samples/cry_zygarde.bin"
 
 	.align 2
 DirectSoundWaveData_register_noise::
