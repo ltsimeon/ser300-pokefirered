@@ -94,3 +94,26 @@ VermilionCity_PokemonFanClub_Text_ChairmanReallyAdoresHisMons::
     .string "POKéMON.\p"
     .string "But the person who is most liked by\n"
     .string "POKéMON is DAISY, I think.$"
+
+VermilionCity_PokemonFanClub_Text_ICollectExoticMons::
+	.string "Ah, you've come to speak to me.\p"
+	.string "I collect exotic POKéMON. They're\n"
+	.string "by far the most interesting.\p"
+	.string "I've heard reports of two rather\n"
+	.string "interesting specimens in SEVII.\p"
+	.string "If you ever find yourself there...\n"
+	.string "could you bring me one?\p"
+	.string "Specifically, I want to see\n"
+	.string "VOLBEAT and UNOWN.$"
+	
+VermilionCity_PokemonFanClub_Text_ThatsVolbeat::
+	.string "Oh! There's a VOLBEAT right there!\n"
+	.string "That cute swagger of his...\p"
+	.string "It's absolutely unmistakeable!\n"
+	.string "I think you deserve this in return.$"
+	
+VermilionCity_PokemonFanClub_Text_ThatsUnown::
+	.string "Oh! That shape...! That's UNOWN!\n"
+	.string "I've been practicing reading them.\p"
+	.string "Why don't you hold on to this?\n"
+	.string "You clearly deserve it.$"

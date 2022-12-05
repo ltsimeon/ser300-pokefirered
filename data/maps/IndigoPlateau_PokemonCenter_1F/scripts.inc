@@ -12,21 +12,25 @@ IndigoPlateau_PokemonCenter_1F_OnTransition::
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_CheckBlockDoor::
-	goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, EventScript_Return
+	goto_if_set FLAG_E4_REMATCH, EventScript_Return
 	setobjectxyperm LOCALID_DOOR_GUARD, 4, 2
 	return
 
 IndigoPlateau_PokemonCenter_1F_EventScript_DoorGuard::
 	lock
 	faceplayer
-	specialvar VAR_RESULT, IsNationalPokedexEnabled
-	goto_if_eq VAR_RESULT, TRUE, IndigoPlateau_PokemonCenter_1F_EventScript_CheckSeviiIslandComplete
+	goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, IndigoPlateau_PokemonCenter_1F_EventScript_CheckPostgame
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck
 	release
 	end
 
+IndigoPlateau_PokemonCenter_1F_EventScript_CheckPostgame::
+	goto_if_set FLAG_HIDE_POSTGAME_GOSSIPERS, EventScript_ReleaseEnd
+	setflag FLAG_E4_REMATCH
+	goto IndigoPlateau_PokemonCenter_1F_EventScript_CheckSeviiIslandComplete
+	
 IndigoPlateau_PokemonCenter_1F_EventScript_CheckSeviiIslandComplete::
-	goto_if_set FLAG_SYS_CAN_LINK_WITH_RS, IndigoPlateau_PokemonCenter_1F_EventScript_SeviiIslandComplete
+	goto_if_set FLAG_E4_REMATCH, IndigoPlateau_PokemonCenter_1F_EventScript_SeviiIslandComplete
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_LoreleiIsAbsentClosedForTimeBeing
 	release
 	end

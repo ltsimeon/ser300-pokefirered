@@ -212,7 +212,6 @@ MysteryEventScript_AuroraTicket::
 	vgoto_if_set FLAG_FOUGHT_DEOXYS, AuroraTicket_Obtained
 	checkitem ITEM_AURORA_TICKET, 1
 	vgoto_if_eq VAR_RESULT, TRUE, AuroraTicket_Obtained
-	vmessage sText_AuroraTicket1
 	waitmessage
 	waitbuttonpress
 	checkitemspace ITEM_AURORA_TICKET, 1
@@ -271,7 +270,6 @@ MysteryEventScript_MysticTicket::
 	vgoto_if_set FLAG_FOUGHT_HO_OH, MysticTicket_Obtained
 	checkitem ITEM_MYSTIC_TICKET, 1
 	vgoto_if_eq VAR_RESULT, TRUE, MysticTicket_Obtained
-	vmessage sText_MysticTicket2
 	waitmessage
 	waitbuttonpress
 	checkitemspace ITEM_MYSTIC_TICKET, 1

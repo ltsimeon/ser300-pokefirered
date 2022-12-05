@@ -31,7 +31,11 @@ PalletTown_RivalsHouse_Text_PleaseGiveMonsRest::
     .string "DAISY: Just like people, POKéMON\n"
     .string "are living things.\p"
     .string "When they get tired, please give\n"
-    .string "them a rest.$"
+    .string "them a rest. By the way...\p"
+	.string "I'm practicing something. When\n"
+	.string "you can cross water, come back.\p"
+	.string "I might be able to make your POKé-\n"
+	.string "MON happier and more beautiful.$"
 
 PalletTown_RivalsHouse_Text_ItsBigMapOfKanto::
     .string "It's a big map of the KANTO region.\n"

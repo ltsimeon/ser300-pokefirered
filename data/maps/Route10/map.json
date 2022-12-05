@@ -295,7 +295,7 @@
       "y": 5,
       "elevation": 3,
       "item": "ITEM_LAVA_COOKIE",
-      "flag": "FLAG_0x333",
+      "flag": "HIDDEN_ITEM_ROUTE10_LAVA_COOKIE",
       "quantity": 1,
       "underfoot": false
     }

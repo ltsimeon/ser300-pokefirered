@@ -72,8 +72,9 @@ VermilionCity_EventScript_CheckHasAuroraTicket::
 
 VermilionCity_EventScript_CheckSeagallopPresent::
 	setvar VAR_0x8004, SEAGALLOP_VERMILION_CITY
-	goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, VermilionCity_EventScript_ChooseSeagallopDestRainbowPass
-	goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 1, VermilionCity_EventScript_ChooseSeagallopDestTriPass
+	checkitem ITEM_RAINBOW_PASS
+	goto_if_eq VAR_RESULT, TRUE, VermilionCity_EventScript_ChooseSeagallopDestRainbowPass
+	call_if_set FLAG_HIDE_ROUTE8_TRI_PASS, VermilionCity_EventScript_ChooseSeagallopDestTriPass
 	msgbox VermilionCity_Text_TheShipSetSail
 	release
 	end

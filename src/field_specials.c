@@ -2071,6 +2071,7 @@ void RunMassageCooldownStepCounter(void)
 void DaisyMassageServices(void)
 {
     AdjustFriendship(&gPlayerParty[gSpecialVar_0x8004], FRIENDSHIP_EVENT_MASSAGE);
+	SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_BEAUTY, (int*)170);
     VarSet(VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 0);
 }
 
@@ -2210,10 +2211,16 @@ void StopPokemonLeagueLightingEffectTask(void)
     }
 }
 
-static const u8 sCapeBrinkCompatibleSpecies[] = {
+static const u16 sCapeBrinkCompatibleSpecies[] = {
     SPECIES_VENUSAUR,
     SPECIES_CHARIZARD,
-    SPECIES_BLASTOISE
+    SPECIES_BLASTOISE,
+	SPECIES_MEGANIUM,
+	SPECIES_TYPHLOSION,
+	SPECIES_FERALIGATR,
+	SPECIES_SCEPTILE,
+	SPECIES_BLAZIKEN,
+	SPECIES_SWAMPERT
 };
 
 bool8 CapeBrinkGetMoveToTeachLeadPokemon(void)
@@ -2238,14 +2245,14 @@ bool8 CapeBrinkGetMoveToTeachLeadPokemon(void)
     }
     if (i == NELEMS(sCapeBrinkCompatibleSpecies) || GetMonData(&gPlayerParty[leadMonSlot], MON_DATA_FRIENDSHIP) != 255)
         return FALSE;
-    if (tutorMonId == 0)
+    if (tutorMonId%3 == 0)
     {
         StringCopy(gStringVar2, gMoveNames[MOVE_FRENZY_PLANT]);
         gSpecialVar_0x8005 = MOVETUTOR_FRENZY_PLANT;
         if (FlagGet(FLAG_TUTOR_FRENZY_PLANT) == TRUE)
             return FALSE;
     }
-    else if (tutorMonId == 1)
+    else if (tutorMonId%3 == 1)
     {
         StringCopy(gStringVar2, gMoveNames[MOVE_BLAST_BURN]);
         gSpecialVar_0x8005 = MOVETUTOR_BLAST_BURN;
@@ -2273,24 +2280,10 @@ bool8 CapeBrinkGetMoveToTeachLeadPokemon(void)
 
 bool8 HasLearnedAllMovesFromCapeBrinkTutor(void)
 {
-    // 8005 is set by CapeBrinkGetMoveToTeachLeadPokemon
-    u8 r4 = 0;
-    if (gSpecialVar_0x8005 == MOVETUTOR_FRENZY_PLANT)
-        FlagSet(FLAG_TUTOR_FRENZY_PLANT);
-    else if (gSpecialVar_0x8005 == MOVETUTOR_BLAST_BURN)
-        FlagSet(FLAG_TUTOR_BLAST_BURN);
-    else
-        FlagSet(FLAG_TUTOR_HYDRO_CANNON);
-    if (FlagGet(FLAG_TUTOR_FRENZY_PLANT) == TRUE)
-        r4++;
-    if (FlagGet(FLAG_TUTOR_BLAST_BURN) == TRUE)
-        r4++;
-    if (FlagGet(FLAG_TUTOR_HYDRO_CANNON) == TRUE)
-        r4++;
-    if (r4 == 3)
-        return TRUE;
-    else
-        return FALSE;
+	// This function used to prevent teaching any singular move more than once from Ultima's collection.
+	// Since you can catch Johto and Hoenn starters in the wild, there is no reason to make Ultima 
+	// one use per type. Now your Swampert and Blastoise can BOTH learn Hydro Cannon!
+    return FALSE;
 }
 
 bool8 CutMoveRuinValleyCheck(void)

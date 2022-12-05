@@ -452,7 +452,7 @@
 #define FLAG_HIDE_FUCHSIA_CITY_WARDENS_HOUSE_RARE_CANDY         0x1B9
 #define FLAG_HIDE_TWO_ISLAND_REVIVE                             0x1BA
 #define FLAG_HIDE_THREE_ISLAND_ZINC                             0x1BB
-#define FLAG_0x1BC                                              0x1BC
+#define FLAG_HIDE_ROUTE8_TRI_PASS                               0x1BC
 #define FLAG_0x1BD                                              0x1BD
 #define FLAG_HIDE_VIRIDIAN_FOREST_POTION_2                      0x1BE
 #define FLAG_HIDE_MT_MOON_B2F_REVIVE                            0x1BF
@@ -646,7 +646,7 @@
 #define FLAG_DID_SEELOR_TRADE                            0x276
 #define FLAG_BERRY_GAME_WON                              0x277
 #define FLAG_GOT_HITMON_FROM_DOJO                        0x278
-#define FLAG_0x279                                       0x279
+#define FLAG_E4_REMATCH                                  0x279
 #define FLAG_SILPH_2F_DOOR_1                             0x27A
 #define FLAG_SILPH_2F_DOOR_2                             0x27B
 #define FLAG_SILPH_3F_DOOR_1                             0x27C

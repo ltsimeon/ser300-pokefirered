@@ -188,3 +188,9 @@ CinnabarIsland_Gym_Text_SorryBadCall::
     .string "Sorry!\n"
     .string "Bad call!$"
 
+CinnabarIsland_Gym_Text_ByTheWayNatDex::
+	.string "Oh, by the way. You should\n"
+	.string "be able to use your POKéDEX\p"
+	.string "in its NATIONAL mode now.\n"
+	.string "That should light a fire in\p"
+	.string "your adventure for sure!$"

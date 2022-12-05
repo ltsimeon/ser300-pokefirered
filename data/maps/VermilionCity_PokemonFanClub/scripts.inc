@@ -112,6 +112,17 @@ VermilionCity_PokemonFanClub_EventScript_Seel::
 	waitmoncry
 	release
 	end
+	
+VermilionCity_PokemonFanClub_EventScript_ExoticCollector::
+	lock
+	faceplayer
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	msgbox VermilionCity_PokemonFanClub_Text_ICollectExoticMons
+	call VermilionCity_PokemonFanClub_EventScript_CheckForVolbeat
+	call VermilionCity_PokemonFanClub_EventScript_CheckForUnown
+	release
+	end
 
 VermilionCity_PokemonFanClub_EventScript_RulesSign1::
 	msgbox VermilionCity_PokemonFanClub_Text_ListenPolitelyToOtherTrainers, MSGBOX_SIGN
@@ -120,3 +131,31 @@ VermilionCity_PokemonFanClub_EventScript_RulesSign1::
 VermilionCity_PokemonFanClub_EventScript_RulesSign2::
 	msgbox VermilionCity_PokemonFanClub_Text_SomeoneBragsBragBack, MSGBOX_SIGN
 	end
+
+VermilionCity_PokemonFanClub_EventScript_CheckForVolbeat::
+	setvar VAR_0x8004, SPECIES_VOLBEAT
+	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
+	goto_if_eq VAR_RESULT, TRUE, VermilionCity_PokemonFanClub_EventScript_VolbeatReward
+	return
+
+VermilionCity_PokemonFanClub_EventScript_CheckForUnown::
+	setvar VAR_0x8004, SPECIES_UNOWN
+	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
+	goto_if_eq VAR_RESULT, TRUE, VermilionCity_PokemonFanClub_EventScript_UnownReward
+	return
+	
+VermilionCity_PokemonFanClub_EventScript_VolbeatReward::
+	goto_if_set FLAG_GOT_AURORA_TICKET, VermilionCity_PokemonFanClub_EventScript_AlreadyShownVolbeat
+	msgbox VermilionCity_PokemonFanClub_Text_ThatsVolbeat
+	goto MysteryEventScript_AuroraTicket
+
+VermilionCity_PokemonFanClub_EventScript_UnownReward::
+	goto_if_set FLAG_GOT_MYSTIC_TICKET, VermilionCity_PokemonFanClub_EventScript_AlreadyShownUnown
+	msgbox VermilionCity_PokemonFanClub_Text_ThatsUnown
+	goto MysteryEventScript_MysticTicket
+	
+VermilionCity_PokemonFanClub_EventScript_AlreadyShownVolbeat::
+	return
+	
+VermilionCity_PokemonFanClub_EventScript_AlreadyShownUnown::
+	return

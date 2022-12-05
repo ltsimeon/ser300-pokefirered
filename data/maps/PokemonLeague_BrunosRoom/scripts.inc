@@ -55,8 +55,8 @@ PokemonLeague_BrunosRoom_EventScript_Bruno::
 	call_if_set FLAG_SYS_GAME_CLEAR, PokemonLeague_BrunosRoom_EventScript_RematchIntro
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	call_if_unset FLAG_SYS_CAN_LINK_WITH_RS, PokemonLeague_BrunosRoom_EventScript_Battle
-	call_if_set FLAG_SYS_CAN_LINK_WITH_RS, PokemonLeague_BrunosRoom_EventScript_Rematch
+	call_if_unset FLAG_E4_REMATCH, PokemonLeague_BrunosRoom_EventScript_Battle
+	call_if_set FLAG_E4_REMATCH, PokemonLeague_BrunosRoom_EventScript_Rematch
 	clearflag FLAG_TEMP_5
 	goto PokemonLeague_BrunosRoom_EventScript_DefeatedBruno
 	end

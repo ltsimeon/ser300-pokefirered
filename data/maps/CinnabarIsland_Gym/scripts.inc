@@ -65,9 +65,12 @@ CinnabarIsland_Gym_EventScript_DefeatedBlaine::
 	setflag FLAG_DEFEATED_BLAINE
 	setflag FLAG_BADGE07_GET
 	setrespawn SPAWN_CINNABAR_ISLAND
+	setflag FLAG_HIDE_TWO_ISLAND_GAME_CORNER_LOSTELLE
+	clearflag FLAG_HIDE_LOSTELLE_IN_HER_HOME
 	setvar VAR_MAP_SCENE_CINNABAR_ISLAND, 1
 	clearflag FLAG_HIDE_CINNABAR_BILL
 	set_gym_trainers 7
+	special EnableNationalPokedex
 	goto CinnabarIsland_Gym_EventScript_GiveTM38
 	end
 
@@ -78,6 +81,7 @@ CinnabarIsland_Gym_EventScript_GiveTM38::
 	giveitem_msg CinnabarIsland_Gym_Text_ReceivedTM38FromBlaine, ITEM_TM38
 	setflag FLAG_GOT_TM38_FROM_BLAINE
 	msgbox CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove
+	msgbox CinnabarIsland_Gym_Text_ByTheWayNatDex
 	release
 	end
 

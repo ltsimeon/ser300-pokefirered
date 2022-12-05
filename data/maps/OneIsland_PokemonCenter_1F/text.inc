@@ -221,13 +221,10 @@ OneIsland_PokemonCenter_1F_Text_AnotherGemstoneInSeviiIslands::
     .string "That other gemstone is supposed to\n"
     .string "be in the SEVII ISLANDS.\p"
     .string "{PLAYER}, please, I need you to go\n"
-    .string "find the other gem.\p"
-    .string "{PLAYER}, may I have your ferry\n"
-    .string "PASS and the TOWN MAP?$"
+    .string "find the other gem.$"
 
 OneIsland_PokemonCenter_1F_Text_ReturnedTriPassForRainbowPass::
-    .string "{PLAYER} returned the TRI-PASS and\n"
-    .string "received the RAINBOW PASS.$"
+    .string "Obtained the RAINBOW PASS.$"
 
 OneIsland_PokemonCenter_1F_Text_ObtainedExtraMapPage::
     .string "Obtained an extra page for the\n"

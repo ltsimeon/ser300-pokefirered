@@ -9303,64 +9303,64 @@
             "encounter_rate": 21,
             "mons": [
               {
-                "min_level": 37,
-                "max_level": 37,
-                "species": "SPECIES_PIDGEOTTO"
+                "min_level": 21,
+                "max_level": 23,
+                "species": "SPECIES_WEEPINBELL"
               },
               {
-                "min_level": 35,
-                "max_level": 35,
+                "min_level": 21,
+                "max_level": 23,
                 "species": "SPECIES_GLOOM"
               },
               {
-                "min_level": 32,
-                "max_level": 32,
+                "min_level": 20,
+                "max_level": 22,
                 "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 30,
-                "max_level": 30,
+                "min_level": 20,
+                "max_level": 22,
                 "species": "SPECIES_ODDISH"
               },
               {
-                "min_level": 34,
-                "max_level": 34,
+                "min_level": 19,
+                "max_level": 23,
                 "species": "SPECIES_VENONAT"
               },
               {
-                "min_level": 34,
-                "max_level": 34,
-                "species": "SPECIES_DROWZEE"
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_BELLSPROUT"
               },
               {
-                "min_level": 35,
-                "max_level": 35,
+                "min_level": 22,
+                "max_level": 24,
                 "species": "SPECIES_EXEGGCUTE"
               },
               {
-                "min_level": 31,
-                "max_level": 31,
+                "min_level": 19,
+                "max_level": 22,
                 "species": "SPECIES_PSYDUCK"
               },
               {
-                "min_level": 37,
-                "max_level": 37,
+                "min_level": 20,
+                "max_level": 23,
                 "species": "SPECIES_VENOMOTH"
               },
               {
-                "min_level": 37,
-                "max_level": 37,
-                "species": "SPECIES_HYPNO"
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_VOLBEAT"
               },
               {
-                "min_level": 40,
-                "max_level": 40,
+                "min_level": 20,
+                "max_level": 23,
                 "species": "SPECIES_VENOMOTH"
               },
               {
-                "min_level": 40,
-                "max_level": 40,
-                "species": "SPECIES_HYPNO"
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_VOLBEAT"
               }
             ]
           },
@@ -13557,64 +13557,64 @@
             "encounter_rate": 21,
             "mons": [
               {
-                "min_level": 32,
-                "max_level": 32,
+                "min_level": 19,
+                "max_level": 21,
                 "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 31,
-                "max_level": 31,
-                "species": "SPECIES_ODDISH"
+                "min_level": 19,
+                "max_level": 21,
+                "species": "SPECIES_BELLSPROUT"
               },
               {
-                "min_level": 29,
-                "max_level": 29,
-                "species": "SPECIES_PIDGEY"
+                "min_level": 19,
+                "max_level": 21,
+                "species": "SPECIES_SPEAROW"
               },
               {
-                "min_level": 36,
-                "max_level": 36,
+                "min_level": 18,
+                "max_level": 22,
                 "species": "SPECIES_GLOOM"
               },
               {
-                "min_level": 34,
-                "max_level": 34,
+                "min_level": 20,
+                "max_level": 22,
                 "species": "SPECIES_PIDGEOTTO"
               },
               {
-                "min_level": 31,
-                "max_level": 31,
+                "min_level": 19,
+                "max_level": 21,
                 "species": "SPECIES_MEOWTH"
               },
               {
-                "min_level": 34,
-                "max_level": 34,
+                "min_level": 20,
+                "max_level": 22,
                 "species": "SPECIES_VENONAT"
               },
               {
-                "min_level": 31,
-                "max_level": 31,
+                "min_level": 19,
+                "max_level": 21,
                 "species": "SPECIES_PSYDUCK"
               },
               {
-                "min_level": 37,
-                "max_level": 37,
+                "min_level": 20,
+                "max_level": 22,
                 "species": "SPECIES_PIDGEOTTO"
               },
               {
-                "min_level": 37,
-                "max_level": 37,
-                "species": "SPECIES_PERSIAN"
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_VOLBEAT"
               },
               {
-                "min_level": 40,
-                "max_level": 40,
+                "min_level": 21,
+                "max_level": 23,
                 "species": "SPECIES_PIDGEOTTO"
               },
               {
-                "min_level": 40,
-                "max_level": 40,
-                "species": "SPECIES_PERSIAN"
+                "min_level": 20,
+                "max_level": 22,
+                "species": "SPECIES_VOLBEAT"
               }
             ]
           },

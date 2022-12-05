@@ -90,6 +90,11 @@ SSAnne_Kitchen_EventScript_ItemGreatBall::
 	finditem ITEM_GREAT_BALL
 	end
 
+Route8_EventScript_ItemTriPass::
+	setvar VAR_MAP_SCENE_ONE_ISLAND_HARBOR, 1
+	finditem ITEM_TRI_PASS
+	end
+
 Route9_EventScript_ItemTM40::
 	finditem ITEM_TM40
 	end

@@ -105,8 +105,6 @@ OneIsland_PokemonCenter_1F_EventScript_MeetCelioScene::
 	applymovement LOCALID_CELIO, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	msgbox OneIsland_PokemonCenter_1F_Text_CelioPleaseTakeThis
-	giveitem_msg OneIsland_PokemonCenter_1F_Text_ObtainedTriPass, ITEM_TRI_PASS, 1, MUS_OBTAIN_KEY_ITEM
-	msgbox OneIsland_PokemonCenter_1F_Text_PassLetsYouTravelBetweenIslands
 	call_if_ge VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 2, OneIsland_PokemonCenter_1F_EventScript_ReceiveTownMapPage
 	call_if_lt VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 2, OneIsland_PokemonCenter_1F_EventScript_ReceiveTownMap
 	setflag FLAG_SYS_SEVII_MAP_123
@@ -292,6 +290,7 @@ OneIsland_PokemonCenter_1F_EventScript_ExplainRainbowPass::
 OneIsland_PokemonCenter_1F_EventScript_GiveCelioRuby::
 	msgbox OneIsland_PokemonCenter_1F_Text_OhThats
 	textcolor NPC_TEXT_COLOR_NEUTRAL
+	removeitem ITEM_RUBY
 	playfanfare MUS_OBTAIN_TMHM
 	message OneIsland_PokemonCenter_1F_Text_HandedRubyToCelio
 	waitmessage
@@ -306,8 +305,7 @@ OneIsland_PokemonCenter_1F_EventScript_GiveCelioRuby::
 	delay 30
 	applymovement LOCALID_CELIO, Common_Movement_FacePlayer
 	waitmovement 0
-	msgbox OneIsland_PokemonCenter_1F_Text_MayIAskOneMoreFavor, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_DeclineHelpCelio
+	msgbox OneIsland_PokemonCenter_1F_Text_MayIAskOneMoreFavor
 	goto OneIsland_PokemonCenter_1F_EventScript_GiveRainbowPass
 	end
 
@@ -319,22 +317,17 @@ OneIsland_PokemonCenter_1F_EventScript_DeclineHelpCelio::
 
 OneIsland_PokemonCenter_1F_EventScript_GiveRainbowPass::
 	msgbox OneIsland_PokemonCenter_1F_Text_AnotherGemstoneInSeviiIslands
-	removeitem ITEM_RUBY
-	removeitem ITEM_TRI_PASS
 	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5
-	additem ITEM_RAINBOW_PASS
-	setflag FLAG_SYS_SEVII_MAP_4567
 	textcolor NPC_TEXT_COLOR_NEUTRAL
+	additem ITEM_RAINBOW_PASS
 	playfanfare MUS_OBTAIN_KEY_ITEM
 	message OneIsland_PokemonCenter_1F_Text_ReturnedTriPassForRainbowPass
-	waitmessage
-	waitfanfare
+	setflag FLAG_SYS_SEVII_MAP_4567
 	playfanfare MUS_OBTAIN_KEY_ITEM
 	message OneIsland_PokemonCenter_1F_Text_ObtainedExtraMapPage
 	waitmessage
 	waitfanfare
 	call EventScript_RestorePrevTextColor
-	goto OneIsland_PokemonCenter_1F_EventScript_ExplainRainbowPass
 	end
 
 OneIsland_PokemonCenter_1F_EventScript_CelioWaitingForRuby::
@@ -485,9 +478,8 @@ OneIsland_PokemonCenter_1F_EventScript_LeaveOneIslandScene::
 	setflag FLAG_HIDE_ONE_ISLAND_POKECENTER_BILL
 	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 3
 	clearflag FLAG_HIDE_CINNABAR_BILL
-	setvar VAR_MAP_SCENE_CINNABAR_ISLAND, 3
 	setvar VAR_0x8004, SEAGALLOP_ONE_ISLAND
-	setvar VAR_0x8006, SEAGALLOP_CINNABAR_ISLAND
+	setvar VAR_0x8006, SEAGALLOP_VERMILION_CITY
 	goto EventScript_SetSail
 	end
 

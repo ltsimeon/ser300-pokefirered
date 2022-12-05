@@ -419,8 +419,6 @@ TwoIsland_CapeBrink_House_EventScript_StarterTutor::
 	call_if_eq VAR_FACING, DIR_WEST, CapeBrinkTutor_EventScript_JumpInPlaceRight
 	msgbox Text_AllowMeToTeachMonUltimateMove, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, CapeBrinkTutor_EventScript_DeclineMove
-	call EventScript_CanOnlyBeLearnedOnce
-	goto_if_eq VAR_RESULT, NO, CapeBrinkTutor_EventScript_DeclineMove
 	msgbox Text_LetMeConferUltimateMove
 	closemessage
 	fadescreen FADE_TO_BLACK
