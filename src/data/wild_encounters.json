@@ -1841,7 +1841,7 @@
             ]
           },
           "water_mons": {
-            "encounter_rate": 1,
+            "encounter_rate": 8,
             "mons": [
               {
                 "min_level": 5,
@@ -1901,7 +1901,7 @@
             ]
           },
           "fishing_mons": {
-            "encounter_rate": 10,
+            "encounter_rate": 25,
             "mons": [
               {
                 "min_level": 5,
@@ -2124,7 +2124,7 @@
             ]
           },
           "fishing_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 29,
             "mons": [
               {
                 "min_level": 29,
@@ -2865,6 +2865,36 @@
                 "min_level": 26,
                 "max_level": 26,
                 "species": "SPECIES_CROBAT"
+              }
+            ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 5,
+            "mons": [
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_GRIMER"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_GROWLITHE"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_VULPIX"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_CROBAT"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_VULPIX"
               }
             ]
           }
@@ -25431,7 +25461,7 @@
           "map": "MAP_MT_EMBER_RUBY_PATH_B4F",
           "base_label": "sMtEmberRubyPathB4F_FireRed",
           "land_mons": {
-            "encounter_rate": 0,
+            "encounter_rate": 7,
             "mons": [
               {
                 "min_level": 5,
