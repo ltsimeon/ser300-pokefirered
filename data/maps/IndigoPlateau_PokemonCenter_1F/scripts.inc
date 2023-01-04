@@ -25,7 +25,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_DoorGuard::
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_CheckPostgame::
-	goto_if_set FLAG_HIDE_POSTGAME_GOSSIPERS, EventScript_ReleaseEnd
+	goto_if_set FLAG_HIDE_POSTGAME_GOSSIPERS, IndigoPlateau_PokemonCenter_1F_EventScript_StepOutOfWay
 	setflag FLAG_E4_REMATCH
 	goto IndigoPlateau_PokemonCenter_1F_EventScript_CheckSeviiIslandComplete
 	
@@ -39,6 +39,17 @@ IndigoPlateau_PokemonCenter_1F_EventScript_SeviiIslandComplete::
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck
 	release
 	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_StepOutOfWay::
+	goto_if_set FLAG_TEMP_6, IndigoPlateau_PokemonCenter_1F_EventScript_SeviiIslandComplete
+	applymovement LOCALID_DOOR_GUARD, IndigoPlateau_PokemonCenter_1F_Movement_GuardStepOutOfWay
+	setflag FLAG_TEMP_6
+	goto IndigoPlateau_PokemonCenter_1F_EventScript_SeviiIslandComplete
+	
+IndigoPlateau_PokemonCenter_1F_Movement_GuardStepOutOfWay::
+	walk_right
+	walk_in_place_faster_down
+	step_end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_GymGuy::
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice, MSGBOX_NPC
